@@ -1,0 +1,60 @@
+{% extends "dash-base.html" %}
+{% load static %}
+{% block title %}Manage Nutrition Records | Type2Beat{% endblock title %}
+{% block main %}
+{% for message in messages %}
+  {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      {{message}}
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  {% else %}
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      {{message}}
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  {% endif %}
+{% endfor %}
+<div class="container-fluid">
+  <div class="container-fluid t2b-bg-light-gray mt-3">
+    <div class="row px-2">
+      <h2 class="p-3">Manage Medical Records</h2>
+    </div>
+    <div class="row p-4 t2b-h500 overflow-auto">
+      <table class="table table-striped w-100">
+        <thead class="thead-dark">
+          <tr>
+            <th>Date</th>
+            <th>Total Nutrition</th>
+            <th colspan="2">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for key,value in records.items %}
+          <tr>
+            <td>{{ key }}</td>
+            <td>Carbohydrates: {{ value.carbohydrates }} g, Fat: {{ value.fat }} g, Protein: {{ value.protein }} g, Sugar {{ value.sugar }} g</td>
+            <td> <a href="{% url 'nutrition_details' key %}" class="t2b-btn-view">View</a> </td>
+            <td> <a href="{% url 'delete_nutrition_all' key %}" class="t2b-btn-delete-primary">Delete</a> </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <!-- Modal -->
+
+  </div>
+</div>
+{% endblock main %}
+
+{% block secondary %}
+{% endblock secondary %}
+
+{% block script %}
+<script>
+</script>
+{% endblock script %}

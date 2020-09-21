@@ -1,0 +1,68 @@
+{% extends "dash-base.html" %}
+{% load static %}
+{% block title %} Update Medical Record | Type2Beat{% endblock title %}
+{% block main %}
+{% for message in messages %}
+  {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      {{message}}
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  {% else %}
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      {{message}}
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  {% endif %}
+{% endfor %}
+<div class="container-fluid">
+  <div class="container-fluid t2b-bg-light-gray mt-3">
+    <div class="row p-4">
+      <div class="col-md-8">
+        <h2 class="py-3">Update Medical Record</h2>
+        {% load widget_tweaks %}
+        <form action="" method="POST">{% csrf_token %}
+          {% for field in form %}
+          <div class="form-group row">
+            {{ field.errors }}
+            <div class="col-sm-4">
+              {{ field.label_tag}}
+            </div>
+            <div class="col-sm-8">
+              {% render_field field class="col-sm-10 form-control" %}
+            </div>
+          </div>
+          {% endfor %}
+          <div class="col-sm-10">
+            <input type="submit" name="Submit" value="Update" class="t2b-btn-1 w-100 my-2">
+          </div>
+        </form>
+      </div>
+      <div class="col-md-4 t2b-bg-white p-3 justify-content">
+        <h5 class="py-2 font-weight-bold">Diabetes: parameters you should know</h5>
+        <p>2-h plasma gluose* should be <strong><mark>&#8804;11.1 mmol/L (200 mg/dl)</mark></strong></p>
+        <p>Fasting plasma gluose should be <strong><mark>&#x227A;7.0 mmol/L (126 mg/dl)</mark></strong></p>
+        <p>HbA1c (glucose)</p>
+        <ul>
+          <li><p class="bg-success text-white py-1 px-3">Non diabetic adults >= 18 years < 5.7</p></li>
+          <li><p class="bg-warning py-1 px-3">Prediabetes (At risk) 5.7 - 6.4</p></li>
+          <li><p class="bg-danger text-white py-1 px-3">Diagnosing Diabetes >= 6.5</p></li>
+        </ul>
+        <p> <small class="blockquote-footer">As per American Diabetes Association (ADA) </small> </p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock main %}
+
+{% block secondary %}
+{% endblock secondary %}
+
+{% block script %}
+<script>
+</script>
+{% endblock script %}

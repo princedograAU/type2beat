@@ -1,0 +1,158 @@
+{% extends "dash-base.html" %}
+{% load static %}
+{% block title %}Glucose Tracker | Type2Beat{% endblock title %}
+{% block main %}
+{% for message in messages %}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  {{message}}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+{% endfor %}
+
+<div class="container-fluid">
+  <div class="container-fluid t2b-bg-light-gray mt-3">
+    <div class="row p-4">
+      <div class="col-md-9">
+        <h1>Record your Nutrition Intake</h1>
+        <hr>
+        <div class="row mt-3">
+          <div class="col-md-4 p-1">
+            <div class="search-box">
+              <form class="searchform">
+                <input type="text" placeholder="Search Food (ex: pasta)" class="form-control" id="food-search-box">
+                <button type="button" name="button" id="search-food-button"><i class="fa fa-search"></i></button>
+              </form>
+              <div class="food-item-box t2b-bg-white">
+                <ul id="food-item-holder"></ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 p-1">
+            <div class="projection t2b-bg-white">
+              <div id="projector" class="p-2"></div>
+            </div>
+          </div>
+          <div class="col-md-4 p-1">
+            <div class="projection t2b-bg-white p-3">
+              <form action="{% url 'glucose' %}" method="POST" id="nutritionIntakeForm">
+                {% csrf_token %}
+                <div class="form-group">
+                  <label for="serving size">Serving Size</label>
+                  <div class="row">
+                    <div class="col-md-10">
+                      <input type="input" class="form-control" name="serveSize" value="1" required>
+                    </div>
+                    <div class="col-md-2">
+                      <p id="units" class="lead"> </p>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="form-group">
+                  <label for="serving size">Date & Time</label>
+                  <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
+                    <input type="text" class="form-control datetimepicker-input" name="mealTimestamp" data-target="#datetimepicker1"/>
+                    <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
+                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                    </div>
+                  </div>
+                  <script type="text/javascript">
+                      $(function () {
+                          $('#datetimepicker1').datetimepicker();
+                      });
+                  </script>
+                </div>
+              </form>
+              <p class="blockquote-footer" id="nutrition-board"> Total nutrition intake </br>carbs 0 g | protien 0 g | sugar 0 g</p>
+              <button type="button" name="button" class="t2b-btn-1 mt-3 w-100">Select Food</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <h1>Your Intake</h1>
+        <hr>
+        <div class="t2b-bg-white p-3" id="cart-view">
+          <ul></ul>
+        </div>
+        <button type="button" class="t2b-btn-1 w-100 mt-3" name="button" id="record-nutrition" disabled>Record Meal</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock main %}
+
+{% block secondary %}
+<div class="container-fluid my-3">
+  <div class="container-fluid t2b-bg-light-gray mt-3">
+    <div class="row p-4">
+      <div class="col-md-8 overflow-auto">
+        <div class="chart">
+          <canvas id="myChart"></canvas>
+        </div>
+      </div>
+      <div class="col-md-4 t2b-bg-white">
+        <div class="p-3 my-3 t2b-bg-primary">
+          <h4>How many carbs you need everyday?</h4>
+          <p class="justify-content">The main source of body glucose is Carbohydrate, Protein and Fat. Where fat and protein contributes very less
+            in the blood glucose level and 100 percent of the carbs is converted into glucose. Therefore it is very important
+            to monitor carbs you take everyday.
+          </p>
+          <div class="row">
+            <div class="col-md-5">
+              <a class="t2b-text-white" href="https://wa.kaiserpermanente.org/healthAndWellness/index.jhtml?item=%2Fcommon%2FhealthAndWellness%2Fconditions%2Fdiabetes%2FglucoseSources.html" target="_blank">Read More...</a>
+            </div>
+            <div class="col-md-7">
+              <a href="https://www.calculator.net/carbohydrate-calculator.html" class="btn btn-light" target="_blank">Calculate Carbs</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock secondary %}
+
+{% block script %}
+<script>
+const ENDPOINT = '/api/chart/data/glucose';
+var defaultData = [];
+var labels = [];
+$.ajax ({
+  method: "GET",
+  url: ENDPOINT,
+  success: function(data) {
+    labels = data.labels
+    defaultData = data.datasets
+    setChart()
+  },
+  error: function(error_data) {
+    console.log("error")
+    console.log(error_data)
+  }
+})
+
+let setChart = ()=>{
+  var ctx = document.getElementById('myChart').getContext('2d');
+  var myChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+          labels: labels,
+          datasets: defaultData
+      },
+      options: {
+          scales: {
+              yAxes: [{
+                  ticks: {
+                      beginAtZero: true
+                  }
+              }]
+          }
+      }
+  });
+}
+</script>
+{% endblock script %}

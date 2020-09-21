@@ -1,0 +1,67 @@
+{% load static %}
+<!-- Navigation -->
+<nav class="navbar fixed-top navbar-expand-md navbar-dark fixed-top bg-t2b-dark">
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'images/logo.png' %}" alt=""></a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'home' %}">Home</a>
+                </li>
+                <li class ="nav-item">
+                    <a class ="nav-link" href ="{% url 'diabetes' %}">Diabetes</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="{% url 'impact' %}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Impact
+                    </a>
+                    <div class="dropdown-menu t2b-bg-dark-primary" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item t2b-text-white" href="{% url 'impact' %}">Negative Aspects of Diabetes</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item t2b-text-white" href="{% url 'heart' %}">Heart</a>
+                        <a class="dropdown-item t2b-text-white" href="{% url 'eyes' %}">Eyes</a>
+                        <a class="dropdown-item t2b-text-white" href="{% url 'kidney' %}">Kidneys</a>
+                        <a class="dropdown-item t2b-text-white" href="{% url 'nerves' %}">Nerves</a>
+                        <a class="dropdown-item t2b-text-white" href="{% url 'digestion' %}">Digestion</a>
+                        <a class="dropdown-item t2b-text-white" href="{% url 'skin' %}">Skin</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="{% url 'prevention' %}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Prevention
+                    </a>
+                    <div class="dropdown-menu t2b-bg-dark-primary" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item t2b-text-white" href="{% url 'prevention' %}">How to Prevent Diabetes</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item t2b-text-white" href="{% url 'healthy_diets' %}">Healthy Diets</a>
+                        <a class="dropdown-item t2b-text-white" href="{% url 'water' %}">Water and Diabetes</a>
+                        <a class="dropdown-item t2b-text-white" href="{% url 'exercises' %}">Exercise</a>
+                        <a class="dropdown-item t2b-text-white" href="{% url 'fast' %}">Fasting and Diabetes</a>
+                    </div>
+                </li>
+                {% if request.user.is_authenticated %}
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="{% url 'dashboard' %}">Dashboard</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+                </li>
+                {% else %}
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="{% url 'register' %}">Register</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="{% url 'login' %}">Login</a>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>

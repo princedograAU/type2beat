@@ -1,0 +1,241 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Home | Type2beat {% endblock title %}
+
+{% block header %}
+
+<header>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner text-center" role="listbox">
+        <!-- Slide One - Set the background image for this slide in the line below -->
+        <div class="carousel-item active" style="background-image: url('{% static 'images/home-Page1.jpg' %}')">
+          <div class="carousel-caption d-flex h-100 align-items-center justify-content-center t2b-text-light t2b-font-serif">
+            <p><strong class="display-4">Do you know Diabetes can be prevented?</strong><br>If you are new to type2beat, then come <a href="{% url 'register' %}" class="carousel-hyperlink-page"> <strong>register with us</strong></a> and prevent diabetes.</p>
+          </div>
+        </div>
+        <!-- Slide Two - Set the background image for this slide in the line below -->
+        <div class="carousel-item" style="background-image: url('{% static 'images/home-Page2.jpg' %}')">
+          <div class="carousel-caption d-flex h-100 align-items-center justify-content-center t2b-text-light t2b-font-serif">
+            <p><strong class="display-4">Diabetes: Prevention is better than Cure</strong><br>Type2Beat can help you prevent diabetes. <a href="{% url 'prevention' %}" class="carousel-hyperlink-page"> <strong>Learn More</strong> </a></p>
+          </div>
+        </div>
+        <!-- Slide Three - Set the background image for this slide in the line below -->
+        <div class="carousel-item" style="background-image: url('{% static 'images/home-Page3.jpg' %}')">
+          <div class="carousel-caption d-flex h-100 align-items-center justify-content-center t2b-text-light t2b-font-serif">
+            <p><strong class="display-4">A healthy diet is a game-changer in diabete prevention</strong><br>Check how many carbs you had today <a href="{% url 'login' %}" class="carousel-hyperlink-page"> <strong>with us</strong> </a></p>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </header>
+{% endblock header %}
+
+{% block main %}
+<div class="container-fluid t2b-section-1">
+    <div class="container p-5">
+      <h1 class="my-4 t2b-h1">"Change your lifestyle today"</h1>
+      <h4>Track your health daily</h4>
+      <h6>and</h6>
+      <h4>Prevent Diabetes</h4>
+    </div>
+</div>
+
+<!-- Fact Australia -->
+<div class="container-fluid parallax" style="background-image: url('{% static 'images/parallax-1.jpg' %}')">
+  <div class="container-fluid content">
+    <div class="col-lg-6 heading t2b-bg-secondary-alpha pb-5">
+      <p class="t2b-text-white">"<strong>1 in every 6</strong>" Australian senior citizens aged over 65 reported having diabetes,
+        over 1 million hospitalizations were associated with diabetes in 2016-2017, it
+        is associated with a myriad of complications which affect the feet, eyes, kidney,
+        and cardiovascular health. </p>
+        <div class ="text-center">
+          <a class="t2b-btn-3 align-center" href="https://www.diabetesaustralia.com.au/" target="_blank">Know More</a>
+        </div>
+    </div>
+  </div>
+</div>
+
+<!-- Page Facts -->
+<div class="container-fluid t2b-bg-light p-3">
+  <div class="container">
+    <div class="row justify-content-center pt-3 pd-3 mt-4">
+      <h1 class="t2b-h1 " >DIABETES FACTS</h1>
+      <p></p>
+    </div>
+    <div class="row mt-4">
+      <div class="col-md-3 t2b-bg-light p-3 t2b-center">
+        <i class="fas fa-people-arrows fa-4x t2b-text-secondary p-3"></i>
+        <h1 class="t2b-h1 t2b-text-secondary">1.8 Million</h1>
+        <p class="align-center">Australians are living with diabetes</p>
+      </div>
+      <div class="col-md-3 t2b-bg-light p-3 t2b-center">
+        <i class="fas fa-raindrops fa-4x t2b-text-secondary p-3"></i>
+        <h1 class="t2b-h1 t2b-text-secondary">Type 2</h1>
+        <p class="align-center">diabetes represents 80-90% of all cases</p>
+      </div>
+      <div class="col-md-3 t2b-bg-light p-3 t2b-center">
+        <i class="fas fa-usd-circle fa-4x t2b-text-secondary p-3"></i>
+        <h1 class="t2b-h1 t2b-text-secondary">$14 Billion</h1>
+        <p class="align-center">costs on Australian Economy each year</p>
+      </div>
+      <div class="col-md-3 t2b-bg-light p-3 t2b-center">
+        <i class="fas fa-chart-bar fa-4x t2b-text-secondary p-3"></i>
+        <h1 class="t2b-h1 t2b-text-secondary">7th</h1>
+        <p class="align-center">most common cause of death</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--End of Page Facts-->
+
+<div class="container-fluid t2b-bg-gray h-100 t2b-text-light p-3">
+  <!-- <div class="container p-5"> -->
+    <div class="row h-100">
+      <div class="col-lg-6">
+        <div class="container-fluid parallax" style="background-image: url('{% static 'images/home-Page1.jpg' %}')">
+          <!-- <div class="container-fluid content">
+          </div> -->
+        </div>
+      </div>
+
+      <div class="col-lg-6 heading pb-5">
+        <div class="container p-4">
+          <h1 class="t2b-h1">CAUSES</h1>
+          <h1 class="t2b-h1">&</h1>
+          <h1 class="t2b-h1">SYMPTOMS</h1>
+          <div class ="text-center text-justify">
+            <br>
+            <h5 class="t2b-text-white">Diabetes is the excess sugar in the blood and its symptoms differ by type. These symptoms vary depending on the sugar level in the blood. It is hard to tell sometimes that people are pre-diabetic or diabetic because all human beings are different and their body responds differently. </h5>
+            <div class ="text-center ">
+              <br>
+              <br>
+              <a class="t2b-btn-3 align-center" href="{% url 'diabetes' %}" >Know More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- Page Causes and Symptoms -->
+
+<div class="container-fluid t2b-bg-gradient-2 p-3 t2b-text-white">
+  <div class="container card-content">
+    <div class="row justify-content-center pt-3 mb-5 mt-4">
+      <h1 class="t2b-h1">PRECAUTIONS</h1>
+      <p></p>
+    </div>
+    <div class="row">
+      <div class="col-md-4 t2b-text-secondary">
+        <div class="card p-3 t2b-bg-white t2b-center t2b-shadow">
+          <h1 class="card-title text-center t2b-text-dark font-weight-bold">Diet</h1>
+          <i class="fas fa-salad fa-8x t2b-text-secondary p-3"></i>
+          <p class="card-text justify-content-center t2b-text-dark">Our body needs <a href="https://wa.kaiserpermanente.org/healthAndWellness/index.jhtml?item=%2Fcommon%2FhealthAndWellness%2Fconditions%2Fdiabetes%2FglucoseSources.html" title="Source of Glucose in the body" target="_blank" class="t2b-text-secondary font-weight-bold">
+            Carbohydrates, Protien and Fat</a> to make energy for body cells from Glucose and Diabetes is a condition where body cannot
+        control the amount of glucose.</p>
+          <a href="{% url 'healthy_diets' %}" class="t2b-btn t2b-btn-dark">Learn More</a>
+        </div>
+      </div>
+      <div class="col-md-4 t2b-text-secondary">
+        <div class="card p-3 t2b-bg-white t2b-center t2b-shadow">
+          <h1 class="card-title text-center t2b-text-dark font-weight-bold">Exercise</h1>
+          <i class="fas fa-dumbbell fa-8x t2b-text-secondary p-3"></i>
+          <p class="card-text justify-content-center t2b-text-dark">Regular exercise helps in increasing insulin sensitivity
+             <a href="https://www.diabetesselfmanagement.com/managing-diabetes/treatment-approaches/increasing-insulin-sensitivity/" title="Exercise increases insulin-sensitivity" target="_blank" class="t2b-text-secondary font-weight-bold">
+             increasing insulin sensitivity</a>, maintan body weight, reduce heart diseases,lowers blood pssure and reduces stress.
+            </p>
+          <a href="{% url 'exercises' %}" class="t2b-btn t2b-btn-dark">Learn More</a>
+        </div>
+      </div>
+      <div class="col-md-4 t2b-text-secondary">
+        <div class="card p-3 t2b-bg-white t2b-center t2b-shadow">
+          <h1 class="card-title text-center t2b-text-dark font-weight-bold">Monitoring</h1>
+          <i class="fas fa-chart-pie fa-8x t2b-text-secondary p-3"></i>
+          <p class="card-text justify-content-center t2b-text-dark">If you are diagnosed with Diabetes, it is recommended to
+             <a href="https://www.heart.org/en/health-topics/diabetes/symptoms-diagnosis--monitoring-of-diabetes" title="Monitor Diabetes Regularly" target="_blank" class="t2b-text-secondary font-weight-bold">
+            monitor blood sugar level and daily carbs intake.</a> The aim of this is to reflect the progress and give further directions.</p>
+          <a href="{% url 'services' %}" class="t2b-btn t2b-btn-dark">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 my-5">
+        <h1 class="t2b-font-serif">REGISTER WITH US</h1>
+        <p>It helps you prevent diabetes, by providing a web application
+        where you can record your daily Carbs, Protien, Sugar and Fat intake. We offer</p>
+        <h5><i class="fas fa-check-circle t2b-text-secondary p-3"></i> 200,000+ Food options to choose from</h5>
+        <h5><i class="fas fa-check-circle t2b-text-secondary p-3"></i> Check key macro-nutrients in food </h5>
+        <h5><i class="fas fa-check-circle t2b-text-secondary p-3"></i> Record diabetes report</h5>
+        <h5><i class="fas fa-check-circle t2b-text-secondary p-3"></i> Graphical health record</h5>
+        <h5><i class="fas fa-check-circle t2b-text-secondary p-3"></i> Maintain historical Data</h5>
+        <a href="{% url 'register' %}" class="btn btn-primary t2b-btn-1 btn-md">REGISTER WITH US</a>
+
+      </div>
+      <div class="col-md-6 t2b-h500 mt-5 p-5">
+        <img src="{% static 'images/dashboard.jpg' %}" alt="" class="img-fluid">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3 t2b-h400 w-100 t2b-bg-light">
+      <div class="p-4 t2b-text-dark t2b-center">
+        <i class="far fa-comment-alt-edit fa-6x mt-4 p-3"></i>
+        <h1 class="font-weight-bold m-4 t2b-font-serif">RECORD</h1>
+        <p>Record your Diabete report data periodically</p>
+      </div>
+    </div>
+    <div class="col-md-3 t2b-h400 w-100 t2b-bg-secondary">
+      <div class="p-4 t2b-text-dark t2b-center">
+        <i class="far fa-calculator fa-6x mt-4 p-3"></i>
+        <h1 class="font-weight-bold mt-4 mb-4 t2b-font-serif">CALCULATE</h1>
+        <p>Calculate your Carbs, Protien and Fat intake daily</p>
+      </div>
+    </div>
+    <div class="col-md-3 t2b-h400 w-100 t2b-bg-dark-primary">
+      <div class="p-4 t2b-text-light t2b-center">
+        <i class="far fa-user-chart fa-6x mt-4 p-3"></i>
+        <h1 class="font-weight-bold m-4 t2b-font-serif">Analyze</h1>
+        <p>Analyze your progress in the form of graphs</p>
+      </div>
+    </div>
+    <div class="col-md-3 t2b-h400 w-100 t2b-bg-gray">
+      <div class="p-4 t2b-text-light t2b-center">
+        <i class="far fa-box-open fa-6x mt-4 p-3"></i>
+        <h1 class="font-weight-bold m-4 t2b-font-serif">Archive</h1>
+        <p>View your hitorical medical and meal intake data</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid t2b-bg-gradient-1">
+  <div class="container">
+    <div class="p-4 t2b-font-serif t2b-center">
+      <h1 class="lead font-weight-bold pt-4">We believe - It's Never Too Late To Make a Change</h1>
+      <p>"Be the change"</p>
+    </div>
+  </div>
+</div>
+{% endblock main %}

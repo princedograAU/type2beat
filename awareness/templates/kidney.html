@@ -1,0 +1,198 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Diabetes effect on the Kidneys | Type2Beat{% endblock title %}
+{% block header %}
+<header>
+    <div class="container">
+        <!-- Page Heading/Breadcrumbs -->
+        <h1 class="mt-5 mb-3 h1">Diabetes effect on the Kidneys</h1>
+
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="{% url 'home' %}" class="t2b-breadcrumb-a">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href = "{% url 'impact'%}" class="t2b-breadcrumb-a">Effect of Diabetes</a>
+            <li class="breadcrumb-item active">Diabetes and Kidneys</li>
+        </ol>
+
+        <!-- Image Header -->
+        <img class="img-fluid rounded mb-4" src="{% static 'images/negative.jpg' %}" alt="">
+    </div>
+
+    <div class = "container t2b-bg-light p-3">
+      <div class ="row p-3">
+        <div class ="col-lg-7">
+          <h4 class="t2b-font-serif font-weight-bold">What is diabetic kidney disease?</h4>
+          <p class ="lead text-justify">
+            Diabetic kidney disease is a type of kidney disease caused by diabetes. And diabetes is the leading cause of kidney disease. About 1 out of 4 adults with diabetes have kidney disease.
+          </p>
+          <p class ="lead text-justify">
+            The main job of the kidneys is to filter wastes and extra water out of your blood to make urine. Your kidneys also help control blood pressure and make hormones that your body needs to stay healthy.
+          </p>
+        </div>
+        <div class = "col-lg-5">
+          <img class="img-fluid rounded mb-4" src="{% static 'images/effectkidney.jpg' %}" alt="">
+        </div>
+      </div>
+
+      <div class ="row p-3">
+        <div class ="col-lg-12">
+          <p class ="lead text-justify">
+            When your kidneys are damaged, they can’t filter blood like they should, which can cause wastes to build up in your body. Kidney damage can also cause other health problems.
+          </p>
+          <p class ="lead text-justify">
+            Kidney damage caused by diabetes usually occurs slowly, over many years. You can take steps to protect your kidneys and to prevent or delay kidney damage.
+          </p>
+        </div>
+      </div>
+      <div class ="row p-3">
+        <div class ="col-lg-12">
+          <h4 class ="t2b-font-serif font-weight-bold">
+            What are other names for diabetic kidney disease?
+          </h4>
+          <p class ="lead text-justify">
+            Diabetic kidney disease is also called DKD, chronic kidney disease, CKD, kidney disease of diabetes, or diabetic nephropathy.
+          </p>
+        </div>
+      </div>
+
+      <div class ="row p-3">
+        <div class ="col-lg-12">
+          <h4 class ="t2b-font-serif font-weight-bold">
+            How does diabetes cause kidney disease?
+          </h4>
+          <p class ="lead text-justify">
+            High blood glucose, also called blood sugar, can damage the blood vessels in your kidneys. When the blood vessels are damaged, they don’t work as well. Many people with diabetes also develop high blood pressure, which can also damage your kidneys. Learn more about high blood pressure and kidney disease.          </p>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class ="container t2b-bg-light p-3">
+
+      <div class ="row p-3">
+        <div class ="col-lg-12">
+          <h4 class ="t2b-font-serif font-weight-bold">
+            What increases my chances of developing diabetic kidney disease?
+          </h4>
+        </div>
+      </div>
+      <div class ="row p-3">
+        <div class ="col-lg-12">
+          <p class ="lead text-justify">
+            Having diabetes for a longer time increases the chances that you will have kidney damage. If you have diabetes, you are more likely to develop kidney disease if your:
+          </p>
+          <ul>
+            <li class ="lead text-justify">blood glucose is too high</li>
+            <li class = "lead text-justify">blood pressure is too high</li>
+          </ul>
+
+
+          <p class ="lead text-justify">
+            You are also more likely to develop kidney disease if you have diabetes and
+          </p>
+          <ul>
+            <li class ="lead text-justify">
+              smoke
+            </li>
+            <li class ="lead text-justify">
+              don't follow your diabetes eating plan
+            </li>
+            <li class ="lead text-justify">
+              eat foods high in salt
+            </li>
+            <li class ="lead text-justify">
+              are not active
+            </li>
+            <li class ="lead text-justify">
+              are overweight
+            </li>
+            <li class ="lead text-justify">
+              have heart disease
+            </li>
+            <li class ="lead text-justify">
+              have a family history of kidney failure
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <br>
+</header>
+{% endblock header %}
+
+{% block main %}
+<main>
+  <div class="container-fluid t2b-section-2">
+    <div class="row">
+      <div class="container">
+        <div class="row p-3">
+          <h3 class="t2b-font-serif">Read This Next</h3>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                  <h4 class="card-header">
+                    <i class="fad fa-heartbeat"></i>
+                    </i> &nbsp &nbsp Diabetes and Heart</h4>
+                  <div class="card-body">
+                    <img class="img-fluid rounded mb-4" src="{% static 'images/effectHeart.jpg' %}" alt="">
+                    <a href="{% url 'heart' %}" class="btn btn-primary t2b-btn-1 btn-md">Learn More</a>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+              <div class="card h-100">
+                <h4 class="card-header">
+                    <i class="fad fa-eye"></i>
+                    </i> &nbsp &nbsp Diabetes and Eyes</h4>
+                <div class="card-body">
+                  <img class="img-fluid rounded mb-4" src="{% static 'images/effectEyes.jpg' %}" alt="">
+                  <a href="{% url 'eyes' %}" class="btn btn-primary t2b-btn-1 btn-md">Learn More</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <h4 class="card-header">
+                        <i class="fad fa-spider-web"></i>
+                        </i> &nbsp &nbsp Diabetes & Nerves</h4>
+                    <div class="card-body">
+                        <img class="img-fluid rounded mb-4" src="{% static 'images/EffectNerves.jpg' %}" alt="">
+                        <a href="{% url 'nerves' %}" class="btn btn-primary t2b-btn-1 btn-md">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+              <div class="card h-100">
+                <h4 class="card-header">
+                    <i class="fad fa-stomach"></i>
+                    </i> &nbsp &nbsp Effect of Diabetes on Digestion</h4>
+                <div class="card-body">
+                  <img class="img-fluid rounded mb-4" src="{% static 'images/effectdigestion.jpg' %}" alt="">
+                  <a href="{% url 'digestion' %}" class="btn btn-primary t2b-btn-1 btn-md">Learn More</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                  <h4 class="card-header">
+                    <i class="fad fa-notes-medical"></i>
+                    </i> &nbsp &nbsp Effect of Diabetes on the Skin</h4>
+                  <div class="card-body">
+                    <img class="img-fluid rounded mb-4" src="{% static 'images/effectskin.jpg' %}" alt="">
+                    <a href="{% url 'skin' %}" class="btn btn-primary t2b-btn-1 btn-md">Learn More</a>
+                  </div>
+                </div>
+            </div>
+
+        </div>
+          <!-- /.row -->
+    </div>
+</main>
+{% endblock main %}

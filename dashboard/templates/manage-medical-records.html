@@ -1,0 +1,64 @@
+{% extends "dash-base.html" %}
+{% load static %}
+{% block title %}Medical Records | Type2Beat{% endblock title %}
+{% block main %}
+{% for message in messages %}
+  {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      {{message}}
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  {% else %}
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      {{message}}
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  {% endif %}
+{% endfor %}
+<div class="container-fluid">
+  <div class="container-fluid t2b-bg-light-gray mt-3">
+    <div class="row px-2">
+      <h2 class="p-3">Manage Medical Records</h2>
+    </div>
+    <div class="row p-4 t2b-h500 overflow-auto">
+      <table class="table table-striped w-100">
+        <thead class="thead-dark">
+          <tr>
+            <th>Date</th>
+            <th>2H Plasma Glucose</th>
+            <th>Fasting Plasma Glucose</th>
+            <th>HbA1c</th>
+            <th colspan="2">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for record in records %}
+          <tr>
+            <td>{{ record.timestamp|date:'d/m/Y' }}</td>
+            <td>{{ record.h2_plasma_glucose }}</td>
+            <td>{{ record.fasting_plasma_glucose }}</td>
+            <td>{{ record.hbA1c }}</td>
+            <td> <a href="{% url 'update_medical_record' record.id %}" class="t2b-btn-primary">Edit</a> </td>
+            <td> <a href="{% url 'delete_medical_record' record.id %}" class="t2b-btn-delete-primary">Delete</a> </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <!-- Modal -->
+
+  </div>
+</div>
+{% endblock main %}
+
+{% block secondary %}
+{% endblock secondary %}
+
+{% block script %}
+<script>
+</script>
+{% endblock script %}

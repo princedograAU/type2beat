@@ -1,0 +1,38 @@
+{% extends "dash-base.html" %}
+{% load static %}
+{% block title %}Manager Records | Type2Beat{% endblock title %}
+{% block main %}
+<div class="container-fluid">
+  <div class="container-fluid t2b-bg-light-gray mt-3">
+    <div class="row p-4">
+      <div class="col-md-12 h-100">
+        <h1>Manage Record</h1>
+        <hr>
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="medical-tab" data-toggle="tab" href="#medical" role="tab" aria-controls="medical" aria-selected="true">Medical</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="nutrition-tab" data-toggle="tab" href="#nutrition" role="tab" aria-controls="nutrition" aria-selected="false">Nutrition</a>
+          </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active t2b-h500 overflow-auto" id="medical" role="tabpanel" aria-labelledby="medical-tab"></div>
+          <div class="tab-pane fade t2b-500 overflow-auto" id="nutrition" role="tabpanel" aria-labelledby="nutrition-tab"></div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock main %}
+
+{% block secondary %}
+{% endblock secondary %}
+
+{% block script %}
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', ()=>{
+  
+});
+</script>
+{% endblock script %}

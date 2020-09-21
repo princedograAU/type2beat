@@ -1,0 +1,51 @@
+{% load static %}
+
+<div class="page-footer p-3 t2b-bg-footer">
+		<div class="container pt-3 pd-3">
+			<script src="https://kit.fontawesome.com/c90a5212ef.js" crossorigin="anonymous"></script>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="t2b-footer-section about">
+						<h1 class="logo-text">
+							<img src="{% static 'images/logo.png' %}">
+						</h1>
+						<p>
+							Content on Type2Beat does not replace the relationship between you and doctors or other healthcare professionals nor the advice you receive from them.
+						</p>
+						<br>
+						<div class ="contact">
+							<span><i class="fad fa-envelope"></i> &nbsp type2beat.au@gmail.com</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="t2b-footer-section">
+						<h2>Quick Links</h2>
+						<br>
+						<ul>
+							<li><a href="{% url 'diabetes' %}" >Diabetes</a></li>
+							<li><a href="{% url 'impact' %}" >Impact of Diabetes </a></li>
+							<li><a href="{% url 'prevention' %}" >Prevention</a></li>
+							<li><a href="{% url 'conditions' %}">Terms and Conditions</a></li>
+							<li><a href="{% url 'privacy' %}">Privacy Policy</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="t2b-footer-section contact-form">
+						<h2> Working Hours</h2>
+						<br>
+						<div>
+							<p>Monday to Thursday: 9am - 5pm</p>
+							<p>Friday: 10am - 2pm</p>
+							<p>Saturday & Sunday: Close</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+</div>
+<div class="t2b-footer-bottom">
+	&copy; Type2Beat.live 2020 | Designed by Delta Team
+</div>
+<!-- footer -->

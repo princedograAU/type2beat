@@ -1,0 +1,200 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Effects of Diabetes on heart | Type2Beat {% endblock title %} 
+{% block header %}
+<header>
+    <div class="container">
+        <!-- Page Heading/Breadcrumbs -->
+        <h1 class="mt-5 mb-3 h1">The Effect of Diabetes on the Heart</h1>
+
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="{% url 'home' %}" class="t2b-breadcrumb-a">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href = "{% url 'impact'%}" class="t2b-breadcrumb-a">Effect of Diabetes</a>
+            <li class="breadcrumb-item active">Diabetes and Heart</li>
+        </ol>
+
+        <!-- Image Header -->
+        <img class="img-fluid rounded mb-4" src="{% static 'images/negative.jpg' %}" alt="">
+    </div>
+
+    <div class = "container t2b-bg-light p-3">
+      <div class="row p-3">
+        <div class="col-lg-6">
+            <h4 class="t2b-font-serif font-weight-bold">What is the link between diabetes, heart disease, and stroke?</h4>
+            <p class ="lead text-justify">Over time, high blood glucose from diabetes can damage your blood vessels and the nerves that control your heart and blood vessels. The longer you have diabetes, the higher the chances that you will develop heart disease.</p>
+            <p class ="lead text-justify">People with diabetes tend to develop heart disease at a younger age than people without diabetes. In adults with diabetes, the most common causes of death are heart disease and stroke. Adults with diabetes are nearly twice as likely to die from heart disease or stroke as people without diabetes.</p>
+        </div>
+
+        <div class ="col-lg-6">
+          <br>
+          <img class="img-fluid rounded mb-4" src="{% static 'images/effectHeart.jpg' %}" alt="">
+        </div>
+      </div>
+
+      <div class ="row p-3">
+        <div class = "col-lg-12">
+          <h4 class = "t2b-font-serif font-weight-bold">How can I lower my chances of a heart attack or stroke if I have diabetes?</h4>
+          <p class = "lead text-justify">
+            Taking care of your diabetes is important to help you take care of your heart. You can lower your chances of having a heart attack or stroke by taking the following steps to manage your diabetes to keep your heart and blood vessels healthy.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <div class ="container t2b-bg-light p-3">
+      <div class = "row p-3">
+        <h4 class = "t2b-font-serif font-weight-bold">
+          Manage your diabetes ABCs
+        </h4>
+        <p class ="lead text-justify">
+          Knowing your diabetes ABCs will help you manage your blood glucose, blood pressure, and cholesterol. Stopping smoking if you have diabetes is also important to lower your chances of heart disease.
+        </p>
+        <div class = "col-lg-2">
+          <h1 class = "t2b-font-serif font-weight-bold text-info text-center">A</h1>
+          <h4 class = "t2b-font-serif font-weight-bold text-info text-center">A1C Test</h4>
+        </div>
+        <div class ="col-lg-10">
+          <p class ="lead text-justify">
+            A is for the A1C test. The A1C test shows your average blood glucose level over the past 3 months. This is different from the blood glucose checks that you do every day. The higher your A1C number, the higher your blood glucose levels have been during the past 3 months. High levels of blood glucose can harm your heart, blood vessels, kidneys, feet, and eyes.
+          </p>
+          <p class ="lead text-justify">
+            The A1C goal for many people with diabetes is below 7 percent. Some people may do better with a slightly higher A1C goal. Ask your health care team what your goal should be.
+          </p>
+        </div>
+      </div>
+
+      <div class ="row p-3">
+        <div class = "col-lg-2">
+          <h1 class = "t2b-font-serif font-weight-bold text-info text-center">B</h1>
+          <h4 class = "t2b-font-serif font-weight-bold text-info text-center">Blood Pressure</h4>
+        </div>
+
+        <div class ="col-lg-10">
+          <p class ="lead text-justify">B is for blood pressure. Blood pressure is the force of your blood against the wall of your blood vessels. If your blood pressure gets too high, it makes your heart work too hard. High blood pressure can cause a heart attack or stroke and damage your kidneys and eyes.</p>
+          <p class ="lead text-justify">The blood pressure goal for most people with diabetes is below 140/90 mm Hg. Ask what your goal should be.</p>
+        </div>
+      </div>
+
+      <div class="row p-3">
+        <div class = "col-lg-2">
+          <h1 class = "t2b-font-serif font-weight-bold text-info text-center">C</h1>
+          <h4 class = "t2b-font-serif font-weight-bold text-info text-center">Cholesterol</h4>
+        </div>
+        <div class="col-lg-10">
+          <p class ="lead text-justify">
+            C is for cholesterol. You have two kinds of cholesterol in your blood: LDL and HDL. LDL or “bad” cholesterol can build up and clog your blood vessels. Too much bad cholesterol can cause a heart attack or stroke. HDL or “good” cholesterol helps remove the “bad” cholesterol from your blood vessels.
+          </p>
+          <p class ="lead text-justify">
+            Ask your health care team what your cholesterol numbers should be. If you are over 40 years of age, you may need to take medicine such as a statin to lower your cholesterol and protect your heart. Some people with very high LDL (“bad”) cholesterol may need to take medicine at a younger age.
+          </p>
+        </div>
+      </div>
+
+      <div class="row p-3">
+        <div class ="col-lg-2">
+          <h1 class = "t2b-font-serif font-weight-bold text-info text-center">S</h1>
+          <h4 class = "t2b-font-serif font-weight-bold text-info text-center">Stop Smoking</h4>
+        </div>
+        <div class ="col-lg-10">
+          <p class ="lead text-justify">
+            S is to stop smoking. Not smoking is especially important for people with diabetes because both smoking and diabetes narrow blood vessels, so your heart has to work harder.
+          </p>
+          <ul class ="list-unstyled">
+            <li class ="lead text-justify">If you quit smoking</li>
+            <ul>
+                <li class ="lead text-justify">You will lower your risk for heart attack, stroke, nerve disease, kidney disease, eye disease, and amputation</li>
+                <li class ="lead text-justify">Your blood glucose, blood pressure, and cholesterol levels may improve</li>
+                <li class ="lead text-justify">Your blood circulation will improve</li>
+                <li class ="lead text-justify">You may have an easier time being physically active</li>
+            </ul>
+        </ul>
+        </div>
+      </div>
+
+    </div>
+    <br>
+</header>
+{% endblock header %}
+
+{% block main %}
+<main>
+    <div class="container-fluid t2b-section-2">
+      <div class="row">
+        <div class="container">
+          <div class="row p-3">
+            <h3 class="t2b-font-serif">Read This Next</h3>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-4 mb-4">
+              <div class="card h-100">
+                <h4 class="card-header">
+                    <i class="fad fa-eye"></i>
+                    </i> &nbsp &nbsp Diabetes and Eyes</h4>
+                <div class="card-body">
+                  <img class="img-fluid rounded mb-4" src="{% static 'images/effectEyes.jpg' %}" alt="">
+                  <a href="{% url 'eyes' %}" class="btn btn-primary t2b-btn-1 btn-md">Learn More</a>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                  <h4 class="card-header">
+                    <i class="fad fa-kidneys"></i>
+                    </i> &nbsp &nbsp Diabetes & Kidney</h4>
+                  <div class="card-body">
+                    <img class="img-fluid rounded mb-4" src="{% static 'images/effectkidney.jpg' %}" alt="">
+                    <a href="{% url 'kidney' %}" class="btn btn-primary t2b-btn-1 btn-md">Learn More</a>
+                  </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <h4 class="card-header">
+                        <i class="fad fa-spider-web"></i>
+                        </i> &nbsp &nbsp Diabetes & Nerves</h4>
+                    <div class="card-body">
+                        <img class="img-fluid rounded mb-4" src="{% static 'images/EffectNerves.jpg' %}" alt="">
+                        <a href="{% url 'nerves' %}" class="btn btn-primary t2b-btn-1 btn-md">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+              <div class="card h-100">
+                <h4 class="card-header">
+                    <i class="fad fa-stomach"></i>
+                    </i> &nbsp &nbsp Effect of Diabetes on Digestion</h4>
+                <div class="card-body">
+                  <img class="img-fluid rounded mb-4" src="{% static 'images/effectdigestion.jpg' %}" alt="">
+                  <a href="{% url 'digestion' %}" class="btn btn-primary t2b-btn-1 btn-md">Learn More</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                  <h4 class="card-header">
+                    <i class="fad fa-notes-medical"></i>
+                    </i> &nbsp &nbsp Effect of Diabetes on the Skin</h4>
+                  <div class="card-body">
+                    <img class="img-fluid rounded mb-4" src="{% static 'images/effectskin.jpg' %}" alt="">
+                    <a href="{% url 'skin' %}" class="btn btn-primary t2b-btn-1 btn-md">Learn More</a>
+                  </div>
+                </div>
+            </div>
+
+        </div>
+          <!-- /.row -->
+    </div>
+</main>
+{% endblock main %}

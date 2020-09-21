@@ -1,0 +1,193 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Exercises for Preventing Diabetes | Type2Beat{% endblock title %} 
+{% block header %}
+<header>
+    <div class="container">
+        <!-- Page Heading/Breadcrumbs -->
+        <h1 class="mt-5 mb-3 h1">Exercises for Preventing Diabetes</h1>
+
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="{% url 'home' %}" class="t2b-breadcrumb-a">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="{% url 'prevention' %}" class="t2b-breadcrumb-a">Prevention</a>
+            </li>
+            <li class="breadcrumb-item active">Exercises</li>
+        </ol>
+
+        <!-- Image Header -->
+        <img class="img-fluid rounded mb-4" src="{% static 'images/exercise-1.jpg' %}" alt="">
+    </div>
+
+    <div class = "container t2b-bg-light p-3">
+      <p class ="lead">Exercise helps <a href="https://www.health.harvard.edu/staying-healthy/the-importance-of-exercise-when-you-have-diabetes" class="carousel-hyperlink-page"> <strong>control weight, lower blood pressure, lower harmful Low-Density Lipoprotein (LDL) cholesterol</strong></a> and triglycerides, raise healthy High-Density Lipoprotein (HDL) cholesterol, strengthen muscles and bones, reduce anxiety, and improve your general well-being. </p>
+      <div class="row p-4">
+        <div class="col-lg-6">
+          <h3 class="t2b-font-serif">Benefits of exercise</h3>
+          <p class ="lead"><i class="fas fa-chevron-circle-right"></i>&nbsp &nbsp Lower blood glucose levels (BGLs)</p>
+          <p class ="lead"><i class="fas fa-chevron-circle-right"></i>&nbsp &nbsp Lower cholesterol and blood pressure</p>
+          <p class ="lead"><i class="fas fa-chevron-circle-right"></i>&nbsp &nbsp Improve heart and blood vessel health</p>
+          <p class ="lead"><i class="fas fa-chevron-circle-right"></i>&nbsp &nbsp Maintain or achieve a healthy body weight</p>
+          <p class ="lead"><i class="fas fa-chevron-circle-right"></i>&nbsp &nbsp Improve mental health.</p>
+        </div>
+
+        <div class="col-lg-6">
+          <div class ="embed-responsive embed-responsive-16by9">
+            <iframe class ="embed-responsive-item" src="https://www.youtube.com/embed/UKxA1PB1jlQ" allowfullscreen></iframe>
+          </div>
+        </div>
+    </div>
+    <p class ="lead text-secondary">For more information visit <a href="{% url 'services' %}" class="carousel-hyperlink-page"> <strong>BetterHealth.vic.gov.au</strong></a></p>
+
+    <p class="text-danger font-italic"> <strong>Disclaimer:</strong> <small>It is important to see your doctor before doing any exercise that has potential risks. Start with something easy and fun, you won’t be doing it on the next day if you don’t like it.</small> </p>
+
+</header>
+<br>
+{% endblock header %}
+
+{% block main %}
+<main>
+    <div class="container t2b-bg-light p-3">
+      <div class="row p-3">
+        <h3 class="t2b-font-serif">What Exercise You Can Do?</h3>
+      </div>
+      <div class="row p-3">
+
+            <div class="col-lg-6 mb-4">
+              <div class="card h-100">
+                <h4 class="card-header">Walking</h4>
+                <div class="card-body">
+                  <div class ="embed-responsive embed-responsive-16by9">
+                    <iframe class ="embed-responsive-item" src="https://www.youtube.com/embed/amRD-peOHhw" allowfullscreen></iframe>
+                  </div>
+                  <br>
+                  <p class="card-text text-justify">Walking is a great solution to help you manage your diabetes, it helps you maintain a steady blood glucose level and body weight. It is recommended to have a 30 minutes walk at least 5 days a week. </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 mb-4">
+              <div class="card h-100">
+                <h4 class="card-header">Swimming</h4>
+                <div class="card-body">
+                  <div class ="embed-responsive embed-responsive-16by9">
+                    <iframe class ="embed-responsive-item" src="https://www.youtube.com/embed/AfnwseOgxE0" allowfullscreen></iframe>
+                  </div>
+                  <br>
+                  <p class="card-text text-justify">Many senior citizens are suffering from joint disease, while swimming would be the best exercise for them. When swimming, your body muscles will be stretched and relaxed, and it doesn’t put extra pressure on your joints, it can not only steady your blood glucose levels but also improve your stress.</p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-lg-6 mb-4">
+              <div class="card h-100">
+                <h4 class="card-header">Cycling</h4>
+                <div class="card-body">
+                  <div class ="embed-responsive embed-responsive-16by9">
+                    <iframe class ="embed-responsive-item" src="https://www.youtube.com/embed/yV6aEY14Fpk" allowfullscreen></iframe>
+                  </div>
+                  <br>
+                  <p class="card-text text-justify">Cycling would be another solution for improving your health, it is indicated that cycling at a moderate pace for an hour can greatly reduce their blood glucose levels to half of it in the next 24 hours. But it is also important to keep your safety when cycling, try to control your pace and cycle on level ground or with only a few hills.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 mb-4">
+              <div class="card h-100">
+                <h4 class="card-header">Gradening</h4>
+                <div class="card-body">
+                  <div class ="embed-responsive embed-responsive-16by9">
+                    <iframe class ="embed-responsive-item" src="https://www.youtube.com/embed/5hjf1Nzojt0" allowfullscreen></iframe>
+                  </div>
+                  <br>
+                  <p class="card-text text-justify">Gardening is for everyone, especially for those with diabetes. It is indicated that the lack of vitamin D could increase the risk of type 2 diabetes, while gardening provides you with more time enjoying the natural sunlight. Gardening is often more time consuming compared with other exercises, which has a great effect on lowering your blood glucose levels. With gardening, you decide what you see and what you eat, it can both relieve your stress and make your diet more healthy. </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 mb-4">
+              <div class="card h-100">
+                <h4 class="card-header">Taichi</h4>
+                <div class="card-body">
+                  <div class ="embed-responsive embed-responsive-16by9">
+                    <iframe class ="embed-responsive-item" src="https://www.youtube.com/embed/duAmCUq0ztg" allowfullscreen></iframe>
+                  </div>
+                  <br>
+                  <p class="card-text text-justify">Tai Chi is A Chinese martial art that has been practiced for generations. A study showed that gentle exercise can prevent diabetes in 60% of cases. It focuses on your breath and mind. There is also a specially designed program supported by Diabetes Australia called ‘Tai Chi for Diabetes’.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 mb-4">
+              <div class="card h-100">
+                <h4 class="card-header">Water Aerobics</h4>
+                <div class="card-body">
+                  <div class ="embed-responsive embed-responsive-16by9">
+                    <iframe class ="embed-responsive-item" src="https://www.youtube.com/embed/WSS4_G97tSA" allowfullscreen></iframe>
+                  </div>
+                  <br>
+                  <p class="card-text text-justify">Water Aerobics is like other exercises, which helps manage your diabetes and lower blood glucose levels. It can also contribute to your body composition in a positive way, which improves your overall quality of life.</p>
+                </div>
+              </div>
+            </div>
+
+
+
+        </div>
+
+    </div>
+    <br>
+
+    <div class="container-fluid t2b-section-2">
+
+      <div class="row">
+        <div class="container">
+          <div class="row p-3">
+            <h3 class="t2b-font-serif">Read This Next</h3>
+          </div>
+
+          <div class="row t2b-container">
+            <div class="col-lg-4 t2b-section-service-1 opp-1">
+              <div class="t2b-section-service-1-inner" style="background: url('{% static 'images/foodforlink.jpg' %}')">
+                <h2>Eat Health Food</h2>
+                <hr class="hr-white">
+                <br>
+                <br>
+                <br>
+                <a href="{% url 'healthy_diets' %}" class="btn btn-primary t2b-btn-2">EXPLORE MORE</a>
+                <hr>
+              </div>
+            </div>
+
+            <div class="col-lg-4 t2b-section-service-1 opp-1">
+              <div class="t2b-section-service-1-inner" style="background: url('{% static 'images/Avoidforlink.jpg' %}')">
+                <h2>Avoid Fasting</h2>
+                <hr class="hr-white">
+                <br>
+                <br>
+                <br>
+                <a href="{% url 'fast' %}" class="btn btn-primary t2b-btn-2">EXPLORE MORE</a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 t2b-section-service-1 opp-1">
+              <div class="t2b-section-service-1-inner" style="background: url('{% static 'images/waterforlink.jpg' %}')">
+                <h2>Water and Diabetes</h2>
+                <hr class="hr-white">
+                <br>
+                <br>
+                <br>
+                <a href="{% url 'water' %}" class="btn btn-primary t2b-btn-2">EXPLORE MORE</a>
+              </div>
+            </div>
+
+            <hr class="hr-white">
+          </div>
+        </div>
+      </div>
+    </div>
+</main>
+{% endblock main %}

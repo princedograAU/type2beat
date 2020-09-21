@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Logout | type2beat {% endblock title %}
+{% block header %}
+<header>
+    <div class="container">
+        <!-- Page Heading/Breadcrumbs -->
+        <h1 class="mt-5 mb-3">Logout</h1>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="{% url 'home' %}" class="t2b-breadcrumb-a">Home</a>
+            </li>
+            <li class="breadcrumb-item active">Logout</li>
+        </ol>
+    </div>
+</header>
+{% endblock header %}
+
+{% block main %}
+<main>
+  <div class="container">
+    <h2>You have been logged out</h2>
+    <div class="border-top pt-3 t2b-h200">
+      <h5 class="text-muted">
+        <a href="{% url 'login' %}">Login Again</a>
+      </h5>
+    </div>
+  </div>
+</main>
+{% endblock main %}

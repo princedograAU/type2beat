@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Type2Beat | prevention from diabetes {% endblock title %}
+{% block header %}
+<header>
+    <div class="container">
+        <!-- Page Heading/Breadcrumbs -->
+        <h1 class="mt-5 mb-3 h1">How we can help you to Prevent Diabetes</h1>
+
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="{% url 'home' %}" class="t2b-breadcrumb-a">Home</a>
+            </li>
+            <li class="breadcrumb-item active">Services</li>
+        </ol>
+
+        <!-- Image Header -->
+        <img class="img-fluid rounded mb-4" src="{% static 'images/serviceforpage.jpg' %}" alt="">
+    </div>
+</header>
+{% endblock header %}
+
+{% block main %}
+<main>
+
+  <div class="container-fluid t2b-bg-gradient-1 p-3">
+    <div class="container mt-5 mb-5 p-2">
+      <div class="row">
+        <div class="col-lg-6">
+          <h1 class="t2b-h1">Medical Report</h1>
+          <h6 class ="lead text-body">
+            We can store your health information to help you to monitor your changing during the progress of preventing diabetes. We can record the health information includes:
+          </h6>
+          <h6 class ="lead text-body"><i class="fad fa-clock" aria-hidden ="true"></i>&nbsp &nbsp Date</h6>
+          <h6 class ="lead text-body"><i class="fad fa-first-aid" aria-hidden ="true"></i> &nbsp &nbsp 2-h plasma glucose</h6>
+          <h6 class ="lead text-body"><i class="fad fa-first-aid" aria-hidden ="true"></i> &nbsp &nbsp Fasting plasma glucose</h6>
+          <h6 class ="lead text-body"><i class="fad fa-first-aid" aria-hidden ="true"></i> &nbsp &nbsp hbA1c</h6>
+          <h6 class ="lead text-body">
+            And then our website will display the diagnostic criteria of diabetes for you.
+          </h6>
+        </div>
+        <div class="col-lg-6">
+          <img src="{% static 'images/dashboard.jpg' %}" alt="" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="container-fluid t2b-bg-gradient-1 p-3">
+    <div class="container mt-5 mb-5 p-2">
+      <div class="row">
+        <div class="col-lg-6">
+          <img src="{% static 'images/servicesugar.jpg' %}" alt="" class="img-fluid">
+        </div>
+        <div class="col-lg-6">
+          <h1 class="t2b-h1">Monitor Your Sugar Intake</h1>
+          <h6 class ="lead text-body">
+            We can store your health information to help you to monitor your changing during the progress of preventing diabetes. We can record the health information includes:
+          </h6>
+          <ul class ="list-unstyled">
+            <ul>
+                <li class ="lead text-body">Search the food you eat </li>
+                <li class ="lead text-body">Choose the meal type</li>
+                <li class ="lead text-body">Choose the date</li>
+            </ul>
+          </ul>
+          <h6 class ="lead text-body">
+            And then we will display the daily sugar intake based on your meal and you can record it on our system.
+          </h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock main %}

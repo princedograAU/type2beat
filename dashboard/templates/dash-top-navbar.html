@@ -1,0 +1,44 @@
+{% load static %}
+
+<div class="d-flex" id="wrapper">
+    <!-- sidebar -->
+        <div class="t2b-bg-primary" id="sidebar-wrapper">
+          <div class="sidebar-heading">Type2Beat.live</div>
+          <div class="list-group list-group-flush">
+              <a href="{% url 'dashboard' %}" class="t2b-bg-primary list-group-item list-group-item-action"><i class="fa fa-home" aria-hidden="true"></i>Dashboard</a>
+              <a href="{% url 'medical' %}" class="t2b-bg-primary list-group-item list-group-item-action"><i class="fa fa-table" aria-hidden="true"></i>Medical Record</a>
+              <a href="{% url 'glucose' %}" class="t2b-bg-primary list-group-item list-group-item-action"><i class="fa fa-table" aria-hidden="true"></i>Record Glucose</a>
+              <a href="#" class="t2b-bg-primary list-group-item list-group-item-action"><i class="fa fa-info-circle" aria-hidden="true"></i>Exercises</a>
+              <a href="#" class="t2b-bg-primary list-group-item list-group-item-action"><i class="fa fa-cutlery" aria-hidden="true"></i>Food</a>
+              <a href="#" class="t2b-bg-primary list-group-item list-group-item-action"><i class="fa fa-bell" aria-hidden="true"></i>Notification</a>
+              <a href="#" class="t2b-bg-primary list-group-item list-group-item-action"><i class="fa fa-info-circle" aria-hidden="true"></i>Help</a>
+          </div>
+        </div>
+
+        <div id="page-content-wrapper">
+            <nav class="t2b-bg-dark navbar navbar-expand-lg border-bottom">
+                <div class="menu-btn" id="menu-toggle">
+                    <div class="hamburger"></div>
+                </div>
+                <div class="t2b-navbar-hero"><img src="{% static 'images/logo.png' %}" alt=""></div>
+                <button class="menu-btn navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#myTogglerNav" aria-controls="myTogglerNav"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <svg class="bi bi-grid-3x3-gap-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 01-1 1H2a1 1 0 01-1-1V2zm5 0a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 01-1 1H7a1 1 0 01-1-1V2zm5 0a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 01-1 1h-2a1 1 0 01-1-1V2zM1 7a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 01-1 1H2a1 1 0 01-1-1V7zm5 0a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 01-1 1H7a1 1 0 01-1-1V7zm5 0a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 01-1 1h-2a1 1 0 01-1-1V7zM1 12a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 01-1 1H2a1 1 0 01-1-1v-2zm5 0a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 01-1 1H7a1 1 0 01-1-1v-2zm5 0a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 01-1 1h-2a1 1 0 01-1-1v-2z"/>
+                    </svg>
+                </button>
+                <section class="collapse navbar-collapse" id="myTogglerNav">
+                    <div class="t2b-navbar-item navbar-nav ml-auto mt-2 mt-lg-0">
+                        <a class="nav-item nav-link" href="">Help</a>
+                        <a class="nav-item nav-link" href="">My account</a>
+                        <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
+                    </div>
+                </section>
+            </nav>
+
+            {% block main %}{% endblock main %}
+            {% block secondary %}{% endblock secondary %}
+        </div>
+    </div>
+</div>

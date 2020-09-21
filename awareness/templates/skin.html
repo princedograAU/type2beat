@@ -1,0 +1,163 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Diabetes effect on skin | Type2Beat{% endblock title %} 
+{% block header %}
+<header>
+    <div class="container">
+        <!-- Page Heading/Breadcrumbs -->
+        <h1 class="mt-5 mb-3 h1">Diabetes effect on skin</h1>
+
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="{% url 'home' %}" class="t2b-breadcrumb-a">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href = "{% url 'impact'%}" class="t2b-breadcrumb-a">Effect of Diabetes</a>
+            <li class="breadcrumb-item active">Diabetes and Skin</li>
+        </ol>
+
+        <!-- Image Header -->
+        <img class="img-fluid rounded mb-4" src="{% static 'images/negative.jpg' %}" alt="">
+    </div>
+
+    <div class = "container t2b-bg-light p-3">
+        <div class ="row p-3">
+            <p class = "lead text-justify">
+                Diabetes can affect every part of the body, including the skin. Many people with diabetes will have a skin disorder caused or affected by diabetes at some time in their lives. In some cases, skin problems can be the first sign that a person has diabetes.
+            </p>
+            <p class = "lead text-justify">
+                In some cases, people with diabetes develop skin conditions that can affect anyone. Examples of these conditions include bacterial infections, fungal infections, and itching. However, people with diabetes also are more prone to getting certain conditions. These include diabetic dermopathy, necrobiosis lipoidica diabeticorum, and eruptive xanthomatosis. Some common skin conditions in people with diabetes:
+            </p>
+        </div>
+
+        <div class ="row p-3">
+            <div class = "col-lg-2">
+                <h2 class = "t2b-font-serif font-weight-bold text-info text-center">1.</h2>
+                <h4 class = "t2b-font-serif font-weight-bold text-info text-center">Acanthosis</h4>
+                <h4 class = "t2b-font-serif font-weight-bold text-info text-center">Nigricans</h4>
+            </div>
+              <div class= "col-lg-10">
+                <p class ="lead text-justify">
+                    This is a condition that results in the darkening and thickening of the skin. Often, areas of tan or brown skin, sometimes slightly raised, appear on the sides of the neck, the armpits, and groin. Occasionally, these darkened areas might appear on the hands, elbows, and knees. Acanthosis nigricans can affect otherwise healthy people, or it can be associated with certain medical conditions. It is frequently found in people with diabetes.
+                </p>
+              </div>
+        </div>
+
+        <div class ="row p-3">
+            <div class = "col-lg-2">
+                <h2 class = "t2b-font-serif font-weight-bold text-info text-center">2.</h2>
+                <h4 class = "t2b-font-serif font-weight-bold text-info text-center">Allergic</h4>
+                <h4 class = "t2b-font-serif font-weight-bold text-info text-center">Reactions</h4>
+            </div>
+              <div class= "col-lg-10">
+                <p class ="lead text-justify">
+                    Allergic reactions to foods, bug bites, and medicines can cause rashes, depressions, or bumps on the skin. If you think you might be having an allergic reaction to a medicine, contact your healthcare provider. Severe allergic reactions might require emergency treatment. It is especially important for people with diabetes to check for rashes or bumps in the areas where they inject their insulin.
+                </p>
+              </div>
+        </div>
+
+        <div class ="row p-3">
+            <div class = "col-lg-2">
+                <h2 class = "t2b-font-serif font-weight-bold text-info text-center">3.</h2>
+                <h4 class = "t2b-font-serif font-weight-bold text-info text-center">Bacterial</h4>
+                <h4 class = "t2b-font-serif font-weight-bold text-info text-center">Infections</h4>
+            </div>
+            <div class= "col-lg-10">
+                <p class ="lead text-justify">
+                    There are different kinds of bacterial infections affecting the skin. These include styes, which are infections of the glands of the eyelids; boils, which are infections of the hair follicles; and carbuncles, which are deep infections of the skin and the underlying tissue. There also are bacterial infections that affect the nails. With a bacterial infection, the areas involved generally are hot, swollen, red, and painful. Most bacterial infections require treatment with antibiotics in the form of pills and/or creams.
+                </p>
+            </div>
+        </div>
+
+        <div class ="row p-3">
+            <div class = "col-lg-2">
+                <h2 class = "t2b-font-serif font-weight-bold text-info text-center">4.</h2>
+                <h5 class = "t2b-font-serif font-weight-bold text-info text-center">Atherosclerosis</h5>
+            </div>
+            <div class= "col-lg-10">
+                <p class ="lead text-justify">
+                    Atherosclerosis is the narrowing of blood vessels thickening of the vessel walls. While atherosclerosis most often is associated with blood vessels in or near the heart, it can affect blood vessels throughout the body, including those that supply the skin. When the blood vessels supplying the skin become narrow, changes occur due to a lack of oxygen. Loss of hair, thinning and shiny skin, thickened and discolored toenails, and cold skin are symptoms of atherosclerosis. Because blood carries the white blood cells that help fight infection, legs, and feet affected by atherosclerosis heal slowly when they are injured.
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <br>
+</header>
+{% endblock header %}
+
+{% block main %}
+<main>
+    <div class="container-fluid t2b-section-2">
+        <div class="row">
+          <div class="container">
+            <div class="row p-3">
+              <h3 class="t2b-font-serif">Read This Next</h3>
+            </div>
+        <div class="row">
+
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                  <h4 class="card-header">
+                    <i class="fad fa-heartbeat"></i>
+                    </i> &nbsp &nbsp Diabetes and Heart</h4>
+                  <div class="card-body">
+                    <img class="img-fluid rounded mb-4" src="{% static 'images/effectHeart.jpg' %}" alt="">
+                    <a href="{% url 'heart' %}" class="btn btn-primary t2b-btn-1 btn-md">Learn More</a>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+              <div class="card h-100">
+                <h4 class="card-header">
+                    <i class="fad fa-eye"></i>
+                    </i> &nbsp &nbsp Diabetes and Eyes</h4>
+                <div class="card-body">
+                  <img class="img-fluid rounded mb-4" src="{% static 'images/effectEyes.jpg' %}" alt="">
+                  <a href="{% url 'eyes' %}" class="btn btn-primary t2b-btn-1 btn-md">Learn More</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                  <h4 class="card-header">
+                    <i class="fad fa-kidneys"></i>
+                    </i> &nbsp &nbsp Diabetes and Kidney</h4>
+                  <div class="card-body">
+                    <img class="img-fluid rounded mb-4" src="{% static 'images/effectkidney.jpg' %}" alt="">
+                    <a href="{% url 'kidney' %}" class="btn btn-primary t2b-btn-1 btn-md">Learn More</a>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <h4 class="card-header">
+                        <i class="fad fa-spider-web"></i>
+                        </i> &nbsp &nbsp Diabetes and its Effect on the Nerves</h4>
+                    <div class="card-body">
+                        <img class="img-fluid rounded mb-4" src="{% static 'images/EffectNerves.jpg' %}" alt="">
+                        <a href="{% url 'nerves' %}" class="btn btn-primary t2b-btn-1 btn-md">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                  <h4 class="card-header">
+                      <i class="fad fa-stomach"></i>
+                      </i> &nbsp &nbsp Effect of Diabetes on Digestion</h4>
+                  <div class="card-body">
+                    <img class="img-fluid rounded mb-4" src="{% static 'images/effectdigestion.jpg' %}" alt="">
+                    <a href="{% url 'digestion' %}" class="btn btn-primary t2b-btn-1 btn-md">Learn More</a>
+                  </div>
+                </div>
+              </div>
+
+        </div>
+          <!-- /.row -->
+    </div>
+</main>
+{% endblock main %}

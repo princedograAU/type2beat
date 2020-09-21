@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Login | type2beat {% endblock title %}
+{% block header %}
+<header>
+    <div class="container">
+        <!-- Page Heading/Breadcrumbs -->
+        <h1 class="mt-5 mb-3">Login</h1>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="{% url 'home' %}" class="t2b-breadcrumb-a">Home</a>
+            </li>
+            <li class="breadcrumb-item active">Login</li>
+        </ol>
+    </div>
+</header>
+{% endblock header %}
+
+{% block main %}
+<main>
+  <div class="container my-3">
+    {% for message in messages %}
+      {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+          {{message}}
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      {% else %}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+          {{message}}
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      {% endif %}
+    {% endfor %}
+    <div class="container-fluid t2b-bg-light p-4 my-3">
+      <div class="row">
+        <div class="col-md-7">
+          <div class="p-4">
+            <h2>Welcome to Type2Beat</h2>
+            <p>Remember: Monitoring your health is one of the 3 golden rules to prevent diabetes.
+            You are just one step away from monitoring your:</p>
+            <h5><i class="far fa-comment-alt-edit t2b-text-secondary p-3"></i> Diabetes medical reports</h5>
+            <h5><i class="far fa-calculator t2b-text-secondary p-3"></i> Daily nutrition intake</h5>
+            <h5><i class="far fa-user-chart t2b-text-secondary p-3"></i> Health progress</h5>
+            <h5><i class="far fa-calendar-alt t2b-text-secondary p-3"></i> Historic data</h5>
+          </div>
+        </div>
+        <div class="col-md-5">
+
+          <div class="p-4 justify-content-left border border-dark">
+            {% load widget_tweaks %}
+            <h4 class="p-3">LOGIN TO YOUR ACCOUNT</h4>
+            <form method="POST">
+              {% csrf_token %}
+              {% for field in form %}
+              <div class="form-group">
+                {{ field.errors }}
+                {{ field.label_tag}}
+                {% render_field field class="form-control" %}
+              </div>
+              {% endfor %}
+              <div class="form-group">
+                <button type="submit" name="button" class="t2b-btn-primary my-4">Login</button>
+              </div>
+            </form>
+            <div class="border-top border-dark pt-3">
+              <small class="text-dark">
+                Need An Account? <a href="{% url 'register' %}"><strong>Sign Up</strong></a>
+              </small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock main %}

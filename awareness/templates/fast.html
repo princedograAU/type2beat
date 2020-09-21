@@ -1,0 +1,161 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Fasting and Diabetes | Type2Beat{% endblock title %} 
+{% block header %}
+<header>
+    <script src="https://kit.fontawesome.com/c90a5212ef.js" crossorigin="anonymous"></script>
+    <div class="container">
+        <!-- Page Heading/Breadcrumbs -->
+        <h1 class="mt-5 mb-3 h1">Fasting and Diabetes</h1>
+
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="{% url 'home' %}" class="t2b-breadcrumb-a">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="{% url 'prevention' %}" class="t2b-breadcrumb-a">Prevention</a>
+            </li>
+            <li class="breadcrumb-item active">Fasting and Diabetes</li>
+        </ol>
+
+        <!-- Image Header -->
+        <img class="img-fluid rounded mb-4" src="{% static 'images/avoidfastPrevent.jpg' %}" alt="">
+    </div>
+
+    <div class = "container t2b-bg-light p-3">
+      <div class ="row p-3">
+        <p class ="lead text-justify">
+          Periods of fasting are undertaken by a number of religions. Fasting with diabetes requires careful diabetes management. The reasons for fasting can vary as can the durations and the conditions of the fasting. For reasons of health, people with diabetes may often be exempt from having to observe the fasting, or may be allowed more leeway in how they complete the fast.
+        </p>
+      </div>
+
+      <div class="row p-3">
+        <div class="col-lg-6">
+
+            <h4 class="t2b-font-serif font-weight-bold">Should I Fast If I Have Diabetes</h4>
+            <p class ="lead text-justify">It is best to fast only if you can be sure that the fasting will not cause any difficulties with your diabetes and your health. Religions will generally excuse people from fasting if the abstinence from nutrition could cause harm.</p>
+            <p class ="lead text-justify">People with complications of diabetes, such as eye problems, kidney damage or heart trouble are advised not to fast.</p>
+            <p class = "lead text-justify">Children, the elderly, pregnant women and people going through illness or disability may also commonly be exempt from taking part.</p>
+        </div>
+
+        <div class ="col-lg-6">
+          <img class="img-fluid rounded mb-4" src="{% static 'images/vgdiet.jpg' %}" alt="">
+        </div>
+      </div>
+
+      <div class ="row p-3">
+        <div class ="col-lg-6">
+          <img class="img-fluid rounded mb-4" src="{% static 'images/VegetarianDiet.jpg' %}" alt="">
+        </div>
+
+        <div class="col-lg-6">
+          <h4 class="t2b-font-serif font-weight-bold">Diabetes Treatment During Fasting</h4>
+          <p class="lead text-justify">
+            Diabetes medication doses may need to be altered during a fast so it is important to check with your doctor before you begin the fast.
+          </p>
+          <p class ="lead text-justify">
+            During the fasting periods, low blood sugar ( hypoglycemia ) is a potential issue and can be dangerous.
+          </p>
+          <p class ="lead text-justify">
+            The other potential for danger or difficulty is in the breaking of the fast. When hungry, it may be more difficult to control which food you take in. If sweet foods or larger amounts of carbohydrate are eaten than would normally be, then this could push blood sugar levels too high
+          </p>
+        </div>
+      </div>
+
+      <div class = "row p-3">
+        <h4 class="t2b-font-serif font-weight-bold">Diet Around Periods Of Fasting</h4>
+        <p class ="lead text-justify">
+          The way fasting is observed can vary between different religions. The length of time can vary quite significantly and some fasts may involve the eating of certain foods. If you are in doubt about the dietary aspect of the fast, arrange to speak with a dietitian.
+        </p>
+      </div>
+    </div>
+
+    <br>
+
+    <div class = "container t2b-bg-light p-3">
+      <div class ="row p-3">
+        <div class = "col-lg-4">
+          <h4 class="t2b-font-serif font-weight-bold">Fasting And Islam</h4>
+          <p class ="lead text-justify">
+              Ramadan is period of fasting which lasts for a lunar month. During Ramada, fasting is observed during the hours of sunlight. Although fasting during Ramadan is generally considered Fard (compulsory), people with diabetes may be exempt from having to fast if the act of fasting presents a danger to health.
+          </p>
+          <p class ="lead text-justify">
+              Being a month long, Ramadan is a long period of fasting so anyone with diabetes who takes part in the fasting is advised to speak with a doctor to discuss both diet and treatment during the fasting period.
+          </p>
+        </div>
+
+        <div class ="col-lg-4">
+          <h4 class="t2b-font-serif font-weight-bold">Fasting And Judaism</h4>
+          <p class="lead text-justify">A number of fasting days are observed in the Jewish faith. The most prominent day of fasting is Yom Kippur, known as The Day of Atonement and the holiest day of the Jewish calendar. The period of fasting on this day starts 20 minutes before nightfall on the evening before Yom Kippur and is broken after nightfall on the following day.</p>
+          <p class ="lead text-justify">Given the medical implications of fasting for over 24 hours, people with diabetes may be permitted not to take part in the fasting. Other days of fasting which may be observed include Fast of Gedalia (Tzom Gedalia), Tenth of Tevet (Asara B’Tevet), Seventeenth of Tamuz (Tzom Tamuz).</p>
+        </div>
+
+        <div class ="col-lg-4">
+          <h4 class="t2b-font-serif font-weight-bold">Fasting And Christianity</h4>
+          <p class = "lead text-justify">Whilst less widely observed in the Anglican faith, fasting may take place on specific days or people may decide to undertake fats on a voluntary basis. The Day of Atonement is one such day.</p>
+          <p class = "lead text-justify">
+              Partial fasts may be undertaken by some.
+          </p>
+          <p class = "lead text-justify">Examples of partial fasts include the Daniel fast which is the undertaking of a diet of vegetables, fruit and water.</p>
+        </div>
+
+      </div>
+    </div>
+    <br>
+
+
+</header>
+{% endblock header %}
+
+{% block main %}
+<main>
+    <div class="container-fluid t2b-section-2">
+
+        <div class="row">
+          <div class="container">
+            <div class="row p-3">
+              <h3 class="t2b-font-serif">Read This Next</h3>
+            </div>
+            <div class="row t2b-container">
+
+              <div class="col-lg-4 t2b-section-service-1 opp-1">
+                <div class="t2b-section-service-1-inner" style="background: url('{% static 'images/foodforlink.jpg' %}')">
+                  <h2>Eat Health Food</h2>
+                  <hr class="hr-white">
+                  <br>
+                  <br>
+                  <br>
+                  <a href="{% url 'healthy_diets' %}" class="btn btn-primary t2b-btn-2">EXPLORE MORE</a>
+                  <hr>
+                </div>
+              </div>
+
+              <div class="col-lg-4 t2b-section-service-1 opp-1">
+                <div class="t2b-section-service-1-inner" style="background: url('{% static 'images/runforlink.jpg' %}')">
+                  <h2>Exercise Regularly</h2>
+                  <hr class="hr-white">
+                  <br>
+                  <br>
+                  <br>
+                  <a href="{% url 'exercises' %}" class="btn btn-primary t2b-btn-2">EXPLORE MORE</a>
+                </div>
+              </div>
+
+              <div class="col-lg-4 t2b-section-service-1 opp-1">
+                <div class="t2b-section-service-1-inner" style="background: url('{% static 'images/waterforlink.jpg' %}')">
+                  <h2>Water and Diabetes</h2>
+                  <hr class="hr-white">
+                  <br>
+                  <br>
+                  <br>
+                  <a href="{% url 'water' %}" class="btn btn-primary t2b-btn-2">EXPLORE MORE</a>
+                </div>
+              </div>
+
+              <hr class="hr-white">
+            </div>
+          </div>
+        </div>
+      </div>
+</main>
+{% endblock main %}

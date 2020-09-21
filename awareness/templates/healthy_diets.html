@@ -1,0 +1,159 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Healthy Dies | Type2beat {% endblock title %} 
+{% block header %}
+<header>
+    <div class="container">
+        <!-- Page Heading/Breadcrumbs -->
+        <h1 class="mt-5 mb-3 h1">Healthy Diets for Preventing Diabetes</h1>
+
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="{% url 'home' %}" class="t2b-breadcrumb-a">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="{% url 'prevention' %}" class="t2b-breadcrumb-a">Prevention</a>
+          </li>
+            <li class="breadcrumb-item active">Healthy Diets</li>
+        </ol>
+
+        <!-- Image Header -->
+        <img class="img-fluid rounded mb-4" src="{% static 'images/diet-1.jpg' %}" alt="">
+    </div>
+
+    <div class = "container">
+      <p class ="lead">Learning about a healthy diet can help you avoid diabetes. There are many diet plans, we are here to recommend some plans that could effectively reduce your blood glucose levels or maintain it at a normal level. </p>
+      <!-- <h4 class ="mt-5 mb-3 t2b-h1"><strong>WHICH DIET IS RIGHT FOR ME?</strong></h4> -->
+      <h4 class="t2b-font-serif p-3">Which Diet Is Right For Me?</h4>
+    </div>
+</header>
+{% endblock header %}
+
+{% block main %}
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 mb-4">
+              <div class="card h-100">
+                <h4 class="card-header">
+                  <i class="fad fa-utensils"></i>
+                  </i> &nbsp &nbsp Diet for Type 1 Diabetes</h4>
+                <div class="card-body">
+                  <img class="img-fluid rounded mb-4" src="{% static 'images/Type1Diet.jpg' %}" alt="">
+                  <p class="lead text-justify">
+                    For type 1 diabetes, the advice is not very different from people who don’t have diabetes.
+                  </p>
+                  <div class="text-center">
+                    <a href="https://www.diabetes.co.uk/diet-for-type1-diabetes.html" class="btn btn-primary t2b-btn-1 btn-md">Learn More About Diet for Type 1 Diabetes</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 mb-4">
+              <div class="card h-100">
+                <h4 class="card-header">
+                  <i class="fad fa-utensils"></i>
+                  </i> &nbsp &nbsp Diet for Type 2 Diabetes</h4>
+                <div class="card-body">
+                  <img class="img-fluid rounded mb-4" src="{% static 'images/Type2Diet.jpg' %}" alt="">
+                  <p class="lead text-justify">
+                    For type 2 diabetes, it is important to understand how sugar in the food will affect your blood glucose levels.
+                  </p>
+                  <div class="text-center">
+                    <a href="https://www.diabetes.co.uk/diet-for-type2-diabetes.html" class="btn btn-primary t2b-btn-1 btn-md">Learn More About Diet for Type 2 Diabetes</a>
+                  </div>
+                </div>
+                <!-- <div class="card-footer">
+                  <a href="{% url 'healthy_diets' %}" class="btn btn-primary t2b-btn-2 btn-md">Learn More About Recipe</a>
+                </div> -->
+              </div>
+            </div>
+
+            <div class="col-lg-6 mb-4">
+              <div class="card h-100">
+                <h4 class="card-header">
+                  <i class="fad fa-utensils"></i>
+                  </i> &nbsp &nbsp Vegan Diet</h4>
+                <div class="card-body">
+                  <img class="img-fluid rounded mb-4" src="{% static 'images/vgdiet.jpg' %}" alt="">
+                  <p class="lead text-justify">
+                    The idea of a vegan diet means cutting out meat, dairy products.
+                  </p>
+                  <div class="text-center">
+                    <a href="https://www.diabetes.co.uk/diet/vegan-diet.html" class="btn btn-primary t2b-btn-1 btn-md">Learn More About Vegan Diet</a>
+                  </div>
+                </div>
+                <!-- <div class="card-footer">
+                  <a href="{% url 'healthy_diets' %}" class="btn btn-primary t2b-btn-2 btn-md">Learn More About Recipe</a>
+                </div> -->
+              </div>
+            </div>
+
+            <div class="col-lg-6 mb-4">
+              <div class="card h-100">
+                <h4 class="card-header">
+                  <i class="fad fa-utensils"></i>
+                  </i> &nbsp &nbsp Vegetarian Diet</h4>
+                <div class="card-body">
+                  <img class="img-fluid rounded mb-4" src="{% static 'images/VegetarianDiet.jpg' %}" alt="">
+                  <p class="lead text-justify">
+                    Different from the vegan diet, the vegetarian diet includes dairy products.
+                  </p>
+                  <div class="text-center">
+                    <a href="https://www.diabetes.co.uk/vegetarian-diet.html" class="btn btn-primary t2b-btn-1 btn-md">Learn More About Vegetarian Diet</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid t2b-section-2">
+
+      <div class="row">
+        <div class="container">
+          <div class="row p-3">
+            <h3 class="t2b-font-serif">Read This Next</h3>
+          </div>
+          <div class="row t2b-container">
+
+            <div class="col-lg-4 t2b-section-service-1 opp-1">
+              <div class="t2b-section-service-1-inner" style="background: url('{% static 'images/runforlink.jpg' %}')">
+                <h2>Exercise Regularly</h2>
+                <hr class="hr-white">
+                <br>
+                <br>
+                <br>
+                <a href="{% url 'exercises' %}" class="btn btn-primary t2b-btn-2">EXPLORE MORE</a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 t2b-section-service-1 opp-1">
+              <div class="t2b-section-service-1-inner" style="background: url('{% static 'images/Avoidforlink.jpg' %}')">
+                <h2>Avoid Fasting</h2>
+                <hr class="hr-white">
+                <br>
+                <br>
+                <br>
+                <a href="{% url 'fast' %}" class="btn btn-primary t2b-btn-2">EXPLORE MORE</a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 t2b-section-service-1 opp-1">
+              <div class="t2b-section-service-1-inner" style="background: url('{% static 'images/waterforlink.jpg' %}')">
+                <h2>Water and Diabetes</h2>
+                <hr class="hr-white">
+                <br>
+                <br>
+                <br>
+                <a href="{% url 'water' %}" class="btn btn-primary t2b-btn-2">EXPLORE MORE</a>
+              </div>
+            </div>
+
+            <hr class="hr-white">
+          </div>
+        </div>
+      </div>
+    </div>
+</main>
+{% endblock main %}

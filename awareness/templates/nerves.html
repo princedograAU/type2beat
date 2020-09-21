@@ -1,0 +1,218 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Diabetes and its effect on the nerves | Type2Beat {% endblock title %} 
+{% block header %}
+<header>
+    <div class="container">
+        <!-- Page Heading/Breadcrumbs -->
+        <h1 class="mt-5 mb-3 h1">Diabetes and its effect on the nerves</h1>
+
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="{% url 'home' %}" class="t2b-breadcrumb-a">Home</a>
+            </li>
+            <!-- <li class="breadcrumb-item">
+              <a href="{% url 'prevention' %}" class="t2b-breadcrumb-a">Prevention</a>
+            </li> -->
+            <li class="breadcrumb-item">
+                <a href = "{% url 'impact'%}" class="t2b-breadcrumb-a">Effect of Diabetes</a>
+            <li class="breadcrumb-item active">Diabetes and Nerves</li>
+        </ol>
+
+        <!-- Image Header -->
+        <img class="img-fluid rounded mb-4" src="{% static 'images/negative.jpg' %}" alt="">
+    </div>
+
+    <div class = "container t2b-bg-light p-3">
+      <div class ="row p-3">
+        <div class = "col-lg-12">
+          <p class = "lead text-justify">
+            Diabetic neuropathy is a type of nerve damage that can occur if you have diabetes. High blood sugar (glucose) can injure nerves throughout your body. Diabetic neuropathy most often damages nerves in your legs and feet.
+          </p>
+          <p class ="lead text-justify">
+            Depending on the affected nerves, diabetic neuropathy symptoms can range from pain and numbness in your legs and feet to problems with your digestive system, urinary tract, blood vessels, and heart. Some people have mild symptoms. But for others, diabetic neuropathy can be quite painful and disabling.
+          </p>
+          <p class ="lead text-justify">
+            Diabetic neuropathy is a serious diabetes complication that may affect as many as 50% of people with diabetes. But you can often prevent diabetic neuropathy or slow its progress with consistent blood sugar management and a healthy lifestyle.
+          </p>
+        </div>
+      </div>
+
+      <div class = "row p-3">
+        <h4 class = "t2b-font-serif font-weight-bold">
+          Types of Neuropathy
+        </h4>
+      </div>
+
+      <div class = "row p-3">
+        <div class = "col-lg-2">
+          <h2 class = "t2b-font-serif font-weight-bold text-info text-center">1.</h2>
+          <h4 class = "t2b-font-serif font-weight-bold text-info text-center">Peripheral</h4>
+          <h4 class = "t2b-font-serif font-weight-bold text-info text-center">Neuropathy</h4>
+        </div>
+        <div class= "col-lg-10">
+          <ul class = "list-unstyled">
+            <li class ="lead text-justify">
+              This type of neuropathy may also be called distal symmetric peripheral neuropathy. It's the most common type of diabetic neuropathy. It affects the feet and legs first, followed by the hands and arms. Signs and symptoms of peripheral neuropathy are often worse at night, and may include:
+            </li>
+            <ul>
+              <li class ="lead text-justify">Numbness or reduced ability to feel pain or temperature changes</li>
+              <li class ="lead text-justify">Tingling or burning sensation </li>
+              <li class ="lead text-justify">Sharp pains or cramps</li>
+              <li class ="lead text-justify">Increased sensitivity to touch — for some people, even a bedsheet's weight can be painful</li>
+              <li class ="lead text-justify">Serious foot problems, such as ulcers, infections, and bone and joint pain</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+
+      <div class = "row p-3">
+        <div class = "col-lg-2">
+          <h2 class = "t2b-font-serif font-weight-bold text-info text-center">2.</h2>
+          <h4 class = "t2b-font-serif font-weight-bold text-info text-center">Autonomic</h4>
+          <h4 class = "t2b-font-serif font-weight-bold text-info text-center">Neuropathy</h4>
+        </div>
+        <div class= "col-lg-10">
+          <ul class = "list-unstyled">
+            <li class ="lead text-justify">
+              The autonomic nervous system controls your heart, bladder, stomach, intestines, sex organs, and eyes. Diabetes can affect nerves in any of these areas, possibly causing:
+            </li>
+            <ul>
+              <li class ="lead text-justify">A lack of awareness that blood sugar levels are low (hypoglycemia unawareness)</li>
+              <li class ="lead text-justify">Bladder or bowel problems</li>
+              <li class ="lead text-justify">Slow stomach emptying (gastroparesis), causing nausea, vomiting, and loss of appetite</li>
+              <li class ="lead text-justify">Changes in the way your eyes adjust from light to dark</li>
+              <li class ="lead text-justify">Decreased sexual response</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+
+      <div class = "row p-3">
+        <div class = "col-lg-2">
+          <h2 class = "t2b-font-serif font-weight-bold text-info text-center">3.</h2>
+          <h4 class = "t2b-font-serif font-weight-bold text-info text-center">Proximal</h4>
+          <h4 class = "t2b-font-serif font-weight-bold text-info text-center">Neuropathy</h4>
+          <br>
+          <h6 class = "t2b-font-serif font-weight-bold text-info text-center">Diabetic</h6>
+          <h6 class = "t2b-font-serif font-weight-bold text-info text-center">Polyradiculopathy</h6>
+        </div>
+        <div class= "col-lg-10">
+          <ul class = "list-unstyled">
+            <li class ="lead text-justify">
+              This type of neuropathy — also called diabetic amyotrophy — often affects nerves in the thighs, hips, buttocks, or legs. It can also affect the abdominal and chest area. Symptoms are usually on one side of the body but may spread to the other side. You may have:
+            </li>
+            <ul>
+              <li class ="lead text-justify">Severe pain in a hip and thigh or buttock</li>
+              <li class ="lead text-justify">Eventual weak and shrinking thigh muscles</li>
+              <li class ="lead text-justify">Difficulty rising from a sitting position</li>
+              <li class ="lead text-justify">Severe stomach pain</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+
+      <div class = "row p-3">
+        <div class = "col-lg-2">
+          <h2 class = "t2b-font-serif font-weight-bold text-info text-center">4.</h2>
+          <h4 class = "t2b-font-serif font-weight-bold text-info text-center">Focal</h4>
+          <h4 class = "t2b-font-serif font-weight-bold text-info text-center">Neuropathy</h4>
+          <br>
+          <h6 class = "t2b-font-serif font-weight-bold text-info text-center">Mononeuropathy</h6>
+        </div>
+        <div class= "col-lg-10">
+          <ul class = "list-unstyled">
+            <li class ="lead text-justify">
+              This type of neuropathy — also called diabetic amyotrophy — often affects nerves in the thighs, hips, buttocks, or legs. It can also affect the abdominal and chest area. Symptoms are usually on one side of the body but may spread to the other side. You may have:
+            </li>
+            <ul>
+              <li class ="lead text-justify">Difficulty focusing or double vision</li>
+              <li class ="lead text-justify">Aching behind one eye</li>
+              <li class ="lead text-justify">Paralysis on one side of your face (Bell's palsy)</li>
+              <li class ="lead text-justify">Numbness or tingling in your hand or fingers, except your pinkie (little finger)</li>
+              <li class ="lead text-justify">Weakness in your hand that may cause you to drop things</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+    <br>
+</header>
+{% endblock header %}
+
+{% block main %}
+<main>
+  <div class="container-fluid t2b-section-2">
+    <div class="row">
+      <div class="container">
+        <div class="row p-3">
+          <h3 class="t2b-font-serif">Read This Next</h3>
+        </div>
+        <div class="row">
+
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                  <h4 class="card-header">
+                    <i class="fad fa-heartbeat"></i>
+                    </i> &nbsp &nbsp Diabetes and Heart</h4>
+                  <div class="card-body">
+                    <img class="img-fluid rounded mb-4" src="{% static 'images/effectHeart.jpg' %}" alt="">
+                    <a href="{% url 'heart' %}" class="btn btn-primary t2b-btn-1 btn-md">Learn More</a>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+              <div class="card h-100">
+                <h4 class="card-header">
+                    <i class="fad fa-eye"></i>
+                    </i> &nbsp &nbsp Diabetes and Eyes</h4>
+                <div class="card-body">
+                  <img class="img-fluid rounded mb-4" src="{% static 'images/effectEyes.jpg' %}" alt="">
+                  <a href="{% url 'eyes' %}" class="btn btn-primary t2b-btn-1 btn-md">Learn More</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                  <h4 class="card-header">
+                    <i class="fad fa-kidneys"></i>
+                    </i> &nbsp &nbsp Diabetes & Kidney</h4>
+                  <div class="card-body">
+                    <img class="img-fluid rounded mb-4" src="{% static 'images/effectkidney.jpg' %}" alt="">
+                    <a href="{% url 'kidney' %}" class="btn btn-primary t2b-btn-1 btn-md">Learn More</a>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+              <div class="card h-100">
+                <h4 class="card-header">
+                    <i class="fad fa-stomach"></i>
+                    </i> &nbsp &nbsp Effect of Diabetes on Digestion</h4>
+                <div class="card-body">
+                  <img class="img-fluid rounded mb-4" src="{% static 'images/effectdigestion.jpg' %}" alt="">
+                  <a href="{% url 'digestion' %}" class="btn btn-primary t2b-btn-1 btn-md">Learn More</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                  <h4 class="card-header">
+                    <i class="fad fa-notes-medical"></i>
+                    </i> &nbsp &nbsp Effect of Diabetes on the Skin</h4>
+                  <div class="card-body">
+                    <img class="img-fluid rounded mb-4" src="{% static 'images/effectskin.jpg' %}" alt="">
+                    <a href="{% url 'skin' %}" class="btn btn-primary t2b-btn-1 btn-md">Learn More</a>
+                  </div>
+                </div>
+            </div>
+
+        </div>
+          <!-- /.row -->
+    </div>
+</main>
+{% endblock main %}

@@ -1,0 +1,164 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Water and Diabetes | Type2Beat {% endblock title %} 
+{% block header %}
+<header>
+    <script src="https://kit.fontawesome.com/c90a5212ef.js" crossorigin="anonymous"></script>
+    <div class="container">
+        <!-- Page Heading/Breadcrumbs -->
+        <h1 class="mt-5 mb-3 h1">Water and Diabetes</h1>
+
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="{% url 'home' %}" class="t2b-breadcrumb-a">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="{% url 'prevention' %}" class="t2b-breadcrumb-a">Prevention</a>
+            </li>
+            <li class="breadcrumb-item active">Water and Diabetes</li>
+        </ol>
+
+        <!-- Image Header -->
+        <img class="img-fluid rounded mb-4" src="{% static 'images/WaterHomePage.jpg' %}" alt="">
+    </div>
+
+    <div class = "container t2b-bg-light p-3">
+      <div class ="row p-3">
+        <p class ="lead text-justify">As water contains no carbohydrate or calories, it is the perfect drink for people with diabetes. Studies have also shown that drinking water could help control blood glucose levels.</p>
+      </div>
+
+      <div class ="row p-3">
+        <div class = "col-lg-6">
+          <h4 class="t2b-font-serif">Dehydration and Diabetes</h4>
+          <p class="lead text-justify">
+            Before commencing a regular exercise program see your doctor for a full medical examination. Initially take it slow - you don’t want to start off too hard, if you are not used to the exercise you will be sore the next day and this will not make exercising a fun experience! Over time, you can slowly increase the intensity of the exercise.
+          </p>
+          <p class ="lead text-justifyy">
+            If you have any diabetes complications like retinopathy, nephropathy, you should talk to your doctor or an accredited exercise physiologist before you start increasing the intensity of your exercise.
+          </p>
+        </div>
+
+        <div class ="col-lg-6">
+          <img class="img-fluid rounded mb-4" src="{% static 'images/Drinking.jpg' %}" alt="">
+        </div>
+
+      </div>
+
+      <div class = "row p-3">
+        <div class ="col-lg-6">
+          <h4 class="t2b-font-serif">Diabetes Insipidius</h4>
+          <p class ="lead text-justify">
+            glucose levels, but leads to the body producing a large amount of urine. This can leave people regularly feeling thirsty, and at a higher risk of dehydration. Increasing how much water you drink can ease these symptoms, and you may be advised to drink a specific amount of water a day by your doctor.
+          </p>
+        </div>
+
+        <div class ="col-lg-6">
+          <h4 class="t2b-font-serif">Diabetes Mellitus</h4>
+          <p class ="lead text-justify">Drinking water helps to rehydrate the blood when the body tries to remove excess glucose through urine.</p>
+          <p class ="lead text-justify">Otherwise, the body may draw on other sources of available water, such as saliva and tears. If water access is limited, glucose may not be passed out of the urine, leading to further dehydration.</p>
+        </div>
+      </div>
+
+      <div class ="row p-3">
+          <h4 class="t2b-font-serif">Lowering Blood Glucose Levels</h4>
+          <p class ="lead text-justify">The bodies of people with diabetes require more fluid when blood glucose levels are high. This can lead to the kidneys attempting to excrete excess sugar through urine. Water will not raise blood glucose levels, which is why it is so beneficial to drink when people with diabetes have high blood sugar, as it enables more glucose to be flushed out of the blood.</p>
+
+      </div>
+    </div>
+
+    <br>
+
+    <div class = "container t2b-bg-light p-3">
+      <div class ="row p-3">
+        <div class ="col-lg-6">
+          <h4 class="t2b-font-serif">How Much Water Should We Drink?</h4>
+          <p class="lead text-justify">The Australian Dietary Guidelines recommend that we drink plenty of water but how much is enough?</p>
+          <p class ="lead text-justify">According to the Nutrient Reference Values for Australia and New Zealand advises that we take in the following quantities of water on average each day:</p>
+          <div class = "container-fluid">
+            <p class = "lead text-justify"><i class="fad fa-male"></i> &nbsp Men: &nbsp <i class="fad fa-glass"></i> 2.6 litres - around 10 cups per day</p>
+            <p class = "lead text-justify"><i class="fad fa-female"></i> &nbsp Women: &nbsp <i class="fad fa-glass"></i> 2 litres - around 8 cups per day</p>
+          </div>
+          <p class = "lead text-justify">These fluid intake values can be made up of any fluid although water is the most highly recommended.</p>
+        </div>
+
+        <div class = "col-lg-6">
+          <img class="img-fluid rounded mb-4" src="{% static 'images/waterforpageW.jpg' %}" alt="">
+        </div>
+      </div>
+
+      <div class ="row p-3">
+        <div class ="col-lg-6">
+          <h4 class="t2b-font-serif">Diabetes Research</h4>
+          <p class = "lead text-justify">The 2011 study of Low Water Intake and Risk for New-Onset Hyperglycemia suggested that when water intake is increased, this could prevent or delay the onset of hyperglycemia and subsequent diabetes.</p>
+          <p class = "lead text-justify">Participants that consumed more than one litre of water per day had a 28 per cent lower risk of developing new onset hyperglycemia, compared to those drinking less than 500ml of water per day.</p>
+          <p class = "lead text-justify">The researchers also highlighted the hormone vasopressin – which rises when dehydration occurs – as a possible risk factor for hyperglycemia and diabetes.</p>
+          <p class= "lead text-justify">While the study had limitations, the authors concluded that increased water intake could reduce the likelihood of heightened vasopressin levels.</p>
+        </div>
+
+        <div class ="col-lg-6">
+          <h4 class="t2b-font-serif">Water Alternatives</h4>
+          <p class = "lead text-justify">If you don’t like the taste of water, it can help to add a slice of fruit, such as orange, lemon or lime. You can prepare cut slices of these fruits and store them in the freezer ready for use.</p>
+          <p class = "lead text-justify">Be wary of bottled flavoured waters, though, as some of these include a relatively high amount of sugar. Other flavoured bottled water have sweeteners which should be better for blood sugar levels than sweetened versions, but are still not as healthy as plain water.</p>
+          <p class = "lead text-justify">Soda or sparkling water will usually be fine as it should simply be carbonated rather than sweetened. However, it is worth checking if you get the chance. Also, don’t make the mistake of asking for tonic water by mistake as tonic water is usually sweetened. </p>
+        </div>
+      </div>
+    </div>
+
+      <br>
+
+
+</header>
+{% endblock header %}
+
+{% block main %}
+<main>
+    <div class="container-fluid t2b-section-2">
+
+        <div class="row">
+          <div class="container">
+            <div class="row p-3">
+              <h3 class="t2b-font-serif">Read This Next</h3>
+            </div>
+            <div class="row t2b-container">
+
+              <div class="col-lg-4 t2b-section-service-1 opp-1">
+                <div class="t2b-section-service-1-inner" style="background: url('{% static 'images/foodforlink.jpg' %}')">
+                  <h2>Eat Health Food</h2>
+                  <hr class="hr-white">
+                  <br>
+                  <br>
+                  <br>
+                  <a href="{% url 'healthy_diets' %}" class="btn btn-primary t2b-btn-2">EXPLORE MORE</a>
+                  <hr>
+                </div>
+              </div>
+
+              <div class="col-lg-4 t2b-section-service-1 opp-1">
+                <div class="t2b-section-service-1-inner" style="background: url('{% static 'images/runforlink.jpg' %}')">
+                  <h2>Exercise Regularly</h2>
+                  <hr class="hr-white">
+                  <br>
+                  <br>
+                  <br>
+                  <a href="{% url 'exercises' %}" class="btn btn-primary t2b-btn-2">EXPLORE MORE</a>
+                </div>
+              </div>
+
+              <div class="col-lg-4 t2b-section-service-1 opp-1">
+                <div class="t2b-section-service-1-inner" style="background: url('{% static 'images/Avoidforlink.jpg' %}')">
+                  <h2>Avoid Fasting</h2>
+                  <hr class="hr-white">
+                  <br>
+                  <br>
+                  <br>
+                  <a href="{% url 'fast' %}" class="btn btn-primary t2b-btn-2">EXPLORE MORE</a>
+                </div>
+              </div>
+
+              <hr class="hr-white">
+            </div>
+          </div>
+        </div>
+      </div>
+</main>
+{% endblock main %}

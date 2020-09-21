@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Register | type2beat {% endblock title %}
+{% block header %}
+<header>
+    <div class="container">
+        <!-- Page Heading/Breadcrumbs -->
+        <h1 class="mt-5 mb-3">Register</h1>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="{% url 'home' %}" class="t2b-breadcrumb-a">Home</a>
+            </li>
+            <li class="breadcrumb-item active">Register</li>
+        </ol>
+    </div>
+</header>
+{% endblock header %}
+
+{% block main %}
+<main>
+  <div class="container my-3">
+    {% for message in messages %}
+      {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+          {{message}}
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      {% else %}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+          {{message}}
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      {% endif %}
+    {% endfor %}
+    <div class="container-fluid t2b-bg-light p-4 my-3">
+      <div class="row">
+        <div class="col-md-7">
+          <div class="p-4">
+            <h2>Why register with us</h2>
+            <p>When you register with type2beat, we will help you to prevent diabetes. We provide
+            you with services that will help you to :-</p>
+            <div class="row">
+              <div class="col-sm-2">
+                <i class="far fa-comment-alt-edit t2b-text-secondary fa-3x p-2"></i>
+              </div>
+              <div class="col-sm-10">
+                <p>Record your key diabetes parameters from your medical report.
+                  It will help you and your doctor to track your history and view your progress. </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-2">
+                <i class="far fa-calculator t2b-text-secondary fa-3x p-2"></i>
+              </div>
+              <div class="col-sm-10">
+                <p>Calculate your daily nutrition intake - carbs, protein, sugar, fat by selecting your meal
+                  from 200,000+ available known food items.</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-2">
+                <i class="far fa-user-chart t2b-text-secondary fa-3x p-2"></i>
+              </div>
+              <div class="col-sm-10">
+                <p>Explore charts of your daily meals.</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-2">
+                <i class="far fa-paste t2b-text-secondary fa-3x p-2"></i>
+              </div>
+              <div class="col-sm-10">
+                <p>Review the history of your food intake to monitor your progress.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="p-4 justify-content-left border border-dark">
+            {% load widget_tweaks %}
+            <h4 class="p-3">REGISTER WITH US</h4>
+            <form method="POST">
+              {% csrf_token %}
+              {% for field in form %}
+              <div class="form-group">
+                {{ field.label_tag}}
+                {% render_field field class="form-control" %}
+                {% if field.errors %}
+                <div class="alert alert-danger list-unstyled" role="alert">
+                  {{ field.errors }}
+                </div>
+                {% endif %}
+              </div>
+              {% endfor %}
+              <div class="form-group">
+                <button type="submit" name="button" class="t2b-btn-primary my-4">Register</button>
+              </div>
+            </form>
+            <div class="border-top border-dark pt-3">
+              <small class="text-dark">
+                Already Have An Account? <a href="{% url 'login' %}"><strong>Sign In</strong></a>
+              </small>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</main>
+{% endblock main %}

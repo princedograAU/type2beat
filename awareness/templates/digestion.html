@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Diabetes and its Effect on the Digestion | Type2Beat{% endblock title %}
+{% block header %}
+<header>
+    <div class="container">
+        <!-- Page Heading/Breadcrumbs -->
+        <h1 class="mt-5 mb-3 h1">Diabetes and its Effect on the Digestion</h1>
+
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="{% url 'home' %}" class="t2b-breadcrumb-a">Home</a>
+            </li>
+            <!-- <li class="breadcrumb-item">
+              <a href="{% url 'prevention' %}" class="t2b-breadcrumb-a">Prevention</a>
+            </li> -->
+            <li class="breadcrumb-item">
+                <a href = "{% url 'impact'%}" class="t2b-breadcrumb-a">Effect of Diabetes</a>
+            <li class="breadcrumb-item active">Digestion</li>
+        </ol>
+
+        <!-- Image Header -->
+        <img class="img-fluid rounded mb-4" src="{% static 'images/negative.jpg' %}" alt="">
+    </div>
+
+    <div class = "container t2b-bg-light p-3">
+      <div class ="row p-3">
+        <p class ="lead text-justify">
+          Gastrointestinal (GI) disorders are common among all people, including those affected by diabetes. At some point in any patient's life, the chances that he or she will develop a GI tract problem, be it peptic ulcer disease, gallstones, irritable bowel syndrome, food poisoning, or some other malady, are extremely high.
+        </p>
+        <div class ="col-lg-6">
+          <p class ="lead text-justify">
+            As many as 75% of patients visiting diabetes clinics will report significant GI symptoms. The entire GI tract can be affected by diabetes from the oral cavity and esophagus to the large bowel and anorectal region. Thus, the symptom complex that may be experienced can vary widely. Common complaints may include dysphagia, early satiety, reflux, constipation, abdominal pain, nausea, vomiting, and diarrhea. Many patients go undiagnosed and under-treated because the GI tract has not been traditionally associated with diabetes and its complications.
+          </p>
+        </div>
+        <div class ="col-lg-6">
+          <img class="img-fluid rounded mb-4" src="{% static 'images/effectdigestion.jpg' %}" alt="">
+        </div>
+      </div>
+      <p class ="lead text-justify">
+        Both acute and chronic hyperglycemia can lead to specific GI complications. Diabetes is a systemic disease that may affect many organ systems, and the GI tract is no exception. As with other complications of diabetes, the duration of the disorder and poor glycemic control seems to be associated with more severe GI problems. Patients with a history of retinopathy, nephropathy, or neuropathy should be presumed to have GI abnormalities until proven otherwise, and this is best determined by asking a few simple questions.
+      </p>
+      <p class ="lead text-justify">
+        Many GI complications of diabetes seem to be related to the dysfunction of the neurons supplying the enteric nervous system. Just as the nerves in the feet may be affected in peripheral neuropathy, the involvement of the intestinal nerves may lead to enteric neuropathy. This is a type of autonomic or "involuntary" neuropathy and may lead to abnormalities in intestinal motility, sensation, secretion, and absorption. Different nerve fibers can either stimulate or inhibit intestinal motility and function, and damage to these nerves can lead to a slowing or acceleration of intestinal function, giving rise to a variable symptom complex. This article will highlight the most common GI disorders seen in people with diabetes.
+      </p>
+    </div>
+    <br>
+</header>
+{% endblock header %}
+
+{% block main %}
+<main>
+  <div class="container-fluid t2b-section-2">
+    <div class="row">
+      <div class="container">
+        <div class="row p-3">
+          <h3 class="t2b-font-serif">Read This Next</h3>
+        </div>
+        <div class="row">
+
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                  <h4 class="card-header">
+                    <i class="fad fa-heartbeat"></i>
+                    </i> &nbsp &nbsp Diabetes and Heart</h4>
+                  <div class="card-body">
+                    <img class="img-fluid rounded mb-4" src="{% static 'images/effectHeart.jpg' %}" alt="">
+                    <a href="{% url 'heart' %}" class="btn btn-primary t2b-btn-1 btn-md">Learn More</a>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+              <div class="card h-100">
+                <h4 class="card-header">
+                    <i class="fad fa-eye"></i>
+                    </i> &nbsp &nbsp Diabetes and Eyes</h4>
+                <div class="card-body">
+                  <img class="img-fluid rounded mb-4" src="{% static 'images/effectEyes.jpg' %}" alt="">
+                  <a href="{% url 'eyes' %}" class="btn btn-primary t2b-btn-1 btn-md">Learn More</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                  <h4 class="card-header">
+                    <i class="fad fa-kidneys"></i>
+                    </i> &nbsp &nbsp Diabetes & Kidney</h4>
+                  <div class="card-body">
+                    <img class="img-fluid rounded mb-4" src="{% static 'images/effectkidney.jpg' %}" alt="">
+                    <a href="{% url 'kidney' %}" class="btn btn-primary t2b-btn-1 btn-md">Learn More</a>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <h4 class="card-header">
+                        <i class="fad fa-spider-web"></i>
+                        </i> &nbsp &nbsp Diabetes and its Effect on the Nerves</h4>
+                    <div class="card-body">
+                        <img class="img-fluid rounded mb-4" src="{% static 'images/EffectNerves.jpg' %}" alt="">
+                        <a href="{% url 'nerves' %}" class="btn btn-primary t2b-btn-1 btn-md">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                  <h4 class="card-header">
+                    <i class="fad fa-notes-medical"></i>
+                    </i> &nbsp &nbsp Effect of Diabetes on the Skin</h4>
+                  <div class="card-body">
+                    <img class="img-fluid rounded mb-4" src="{% static 'images/effectskin.jpg' %}" alt="">
+                    <a href="{% url 'skin' %}" class="btn btn-primary t2b-btn-1 btn-md">Learn More</a>
+                  </div>
+                </div>
+            </div>
+
+        </div>
+          <!-- /.row -->
+    </div>
+</main>
+{% endblock main %}

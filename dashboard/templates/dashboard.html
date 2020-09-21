@@ -1,0 +1,146 @@
+{% extends "dash-base.html" %}
+{% load static %}
+{% csrf_token %}
+{% block title %}Dashboard | Type2Beat{% endblock title %}
+{% block main %}
+<div class="container-fluid">
+  <div class="container-fluid t2b-bg-light-gray mt-3">
+    <div class="row p-3 t2b-bg-white my-3 shadow">
+      <h3 class="t2b-text-dark font-weight-bold">Welcome {{ user.get_full_name }}</h3>
+    </div>
+    <div class="row py-2">
+      <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-primary shadow h-100 py-2">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="text-xs font-weight-bold t2b-text-secondary text-uppercase mb-1 card-text-header">2-H PLASMA GLUCOSE</div>
+                <div class="h5 mb-0 font-weight-boldtext-gray-800 card-text-value">0.00</div>
+                <div class="card-blockquotes blockquote-footer">
+                  Nill
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-primary shadow h-100 py-2">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="text-xs font-weight-bold t2b-text-secondary text-uppercase mb-1 card-text-header">FASTING PLASMA GLUCOSE</div>
+                <div class="h5 mb-0 font-weight-boldtext-gray-800 card-text-value">0.00</div>
+                <div class="card-blockquotes blockquote-footer">Nill</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-primary shadow h-100 py-2">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="text-xs font-weight-bold t2b-text-secondary text-uppercase mb-1 card-text-header">HBA1C</div>
+                <div class="h5 mb-0 font-weight-boldtext-gray-800 card-text-value">0.00</div>
+                <div class="card-blockquotes blockquote-footer">Nill</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-primary shadow h-100 py-2">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="text-xs font-weight-bold t2b-text-secondary text-uppercase mb-1">
+                  Calculate required daily carbs
+                </div>
+                <div class="h5 mb-0 font-weight-boldtext-gray-800">
+                  <a href="https://www.calculator.net/carbohydrate-calculator.html" target="_blank">Carbs Calculator</a>
+                </div>
+              </div>
+              <div class="col-auto">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="container-fluid t2b-bg-light-gray mt-3">
+    <div class="row p-3">
+      <div class="col-md-6 t2b-bg-white">
+        <div class="row">
+          <h1 class="p-3">Medical Overview</h1>
+        </div>
+        <div class="row p-3">
+          <canvas id="myChart1"></canvas>
+        </div>
+      </div>
+      <div class="col-md-6 t2b-bg-white">
+        <div class="row">
+          <h1 class="p-3">Nutrition Overview</h1>
+        </div>
+        <div class="row p-3">
+          <canvas id="myChart2"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock main %}
+
+{% block secondary %}{% endblock secondary %}
+{% block script %}
+<script>
+
+document.addEventListener('DOMContentLoaded', ()=>{
+  loadDashBoard();
+});
+
+const ENDPOINTS = ['/api/chart/data/medical', '/api/chart/data/glucose'];
+var defaultData = [];
+var labels = [];
+for (let counter=0; counter<ENDPOINTS.length; counter++){
+  $.ajax ({
+    method: "GET",
+    url: ENDPOINTS[counter],
+    success: function(data) {
+      labels = data.labels
+      defaultData = data.datasets
+      setChart(counter+1)
+    },
+    error: function(error_data) {
+      console.log("error")
+      console.log(error_data)
+    }
+  })
+}
+
+let setChart = (counter)=>{
+  var ctx = document.getElementById(`myChart${counter}`).getContext('2d');
+  var myChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+          labels: labels,
+          datasets: defaultData
+      },
+      options: {
+          scales: {
+              yAxes: [{
+                  ticks: {
+                      beginAtZero: true
+                  }
+              }]
+          }
+      }
+  });
+}
+</script>
+{% endblock script %}
