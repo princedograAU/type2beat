@@ -7,7 +7,7 @@ services:
             - POSTGRES_DB=postgres
             - POSTGRES_USER=postgres
             - POSTGRES_PASSWORD=postgres
-    api:
+    type2beat:
         build: .
         ports:
             - "8000:8000"
@@ -34,7 +34,7 @@ services:
         ports:
             - "80:8080"
         depends_on: 
-            - api
+            - type2beat
 
 volumes: 
     static_data:
