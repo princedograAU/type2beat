@@ -13,6 +13,9 @@ RUN mkdir /type2beat
 WORKDIR /type2beat
 COPY . /type2beat
 
+COPY ./scripts /scripts
+RUN chmod +x /scripts/*
+
 RUN mkdir -p /vol/web/media
 RUN mkdir -p /vol/web/static
 RUN adduser -D user
