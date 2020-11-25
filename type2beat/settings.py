@@ -15,17 +15,14 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+SECRET_KEY = os.environ.get('SECRET_KEY', 'type2beat')
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'h8c(6o%mkt-ph(vem9@!6c!jst+skp$kx_il3zjkkr7-6dt!m$'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = bool(int(os.environ.get('DEBUG', 0)))
 
 ALLOWED_HOSTS = []
+ALLOWED_HOSTS_ENV = os.environ.get('ALLOWED_HOSTS')
+if ALLOWED_HOSTS_ENV:
+    ALLOWED_HOSTS.extend(ALLOWED_HOSTS_ENV.split(","))
 
 
 # Application definition
@@ -81,12 +78,12 @@ WSGI_APPLICATION = 'type2beat.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'type2beatdb',
-        'USER': 'type2beatuser',
-        'PASSWORD': 'type2beat',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'ENGINE': os.environ.get('DB_ENGINE'),
+        'NAME': os.environ.get('DB_NAME'),
+        'USER': os.environ.get('DB_USER'),
+        'PASSWORD': os.environ.get('DB_PASS'),
+        'HOST': os.environ.get('DB_HOST'),
+        'PORT': os.environ.get('DB_PORT'),
     }
 }
 
@@ -127,8 +124,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_URL = '/static/static/'
+MEDIA_URL = '/static/media/'
+MEDIA_ROOT = '/vol/web/media'
+STATIC_ROOT = '/vol/web/static'
 
 LOGIN_REDIRECT_URL = 'dashboard'
 LOGIN_URL = 'login'

@@ -1,0 +1,40 @@
+version: "3"
+
+services:
+    db:
+        image: postgres:13.0-alpine
+        environment:
+            - POSTGRES_DB=postgres
+            - POSTGRES_USER=postgres
+            - POSTGRES_PASSWORD=postgres
+    api:
+        build: .
+        ports:
+            - "8000:8000"
+        volumes:
+            - static_data:/vol/web
+        command: /bin/sh -c "python manage.py runserver 0.0.0.0:8000"
+        environment: 
+            - DEBUG=1
+            - DB_HOST=db
+            - DB_NAME=postgres
+            - DB_USER=postgres
+            - DB_PASS=postgres
+            - DB_ENGINE=django.db.backends.postgresql
+            - DB_PORT=5432
+            - ALLOWED_HOSTS=54.206.86.48
+        depends_on: 
+            - db
+    
+    proxy:
+        build:
+            context: ./proxy
+        volumes: 
+            - static_data:/vol/static
+        ports:
+            - "80:8080"
+        depends_on: 
+            - api
+
+volumes: 
+    static_data:
