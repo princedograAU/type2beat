@@ -1,6 +1,7 @@
 FROM python:3.7.9-alpine3.12
 
 ENV PYTHONUNBUFFERED 1
+ENV PATH="/scripts:${PATH}"
 
 COPY ./requirements.txt /requirements.txt
 RUN apk add --update --no-cache postgresql-client
@@ -18,3 +19,5 @@ RUN adduser -D user
 RUN chown -R user:user /vol/
 RUN chmod -R 755 /vol/web
 USER user
+
+CMD ["entrypoint.sh"]
